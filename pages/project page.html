@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management</title>
+    <link rel="stylesheet" href="../styles/project page.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header class="custom-header">
+        <div class="logo">
+            <img src="../assets/business boss1.png" alt="Logo">
+        </div>
+        <input type="checkbox" id="menu-toggle"> <!-- Hidden checkbox for toggling the nav -->
+        <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
+        <nav>
+            <ul>
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_service'">Services</button></li> <!-- Navigation button for Services -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_product'">Products</button></li> <!-- Navigation button for Products -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_shop'">View Shop</button></li> <!-- Navigation button for View Shop -->
+                <li class="dropdown">
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <div class="dropdown-content">
+                        <a href="#">Help</a> <!-- Dropdown link for Help -->
+                        <a href="#">Password</a> <!-- Dropdown link for Password -->
+                        <a href="/dashboard_subscription">Subscription</a> <!-- Dropdown link for Subscription -->
+                        <a href="/login">Log Out</a> <!-- Dropdown link for Log Out -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-column">
+        <a href="/dashboard">
+            <h2 class="dashboard-heading">Dashboard</h2>
+        </a>
+        <div class="dashboard-links">
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+            <button class="dashboard-button active" onclick="window.location.href='/dashboard_project'">Projects</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
+        </div>
+    </div>
+
+    <main>
+        <button class="create-order-button">+ Add Project</button> <!-- Button to add new project -->
+        <div class="project-form">
+            <div class="form-group">
+                <label for="project-name">Project Name *</label>
+                <input type="text" id="project-name" name="project-name" placeholder="Enter Project Name">
+            </div>
+            <div class="form-group">
+                <label for="project-description">Project Description *</label>
+                <input type="text" id="project-description" name="project-description" placeholder="Describe project goals">
+            </div>
+            <div class="form-group">
+                <label for="project-budget">Project Budget</label>
+                <input type="text" id="project-budget" name="project-budget" placeholder="Enter Budget">
+            </div>
+            <div class="form-group">
+                <label for="project-duration">Project Duration</label>
+                <input type="text" id="project-duration" name="project-duration" placeholder="Enter Duration">
+            </div>
+        </div>
+        <button class="create-order-button">+ Add Tasks</button>
+        <div class="tasks">
+            <div class="task-header">
+                <span>Tasks</span>
+                <span>Things to be Done</span>
+                <span>Expenses</span>
+                <span>Assign to</span>
+                <span>Start & End Date</span>
+                <span >Duration</span>
+                <span >Status</span>
+            </div>
+            <div class="task">
+                <span>Task 1</span>
+                <input type="text" placeholder="Post ad on Facebook">
+                <input type="text" placeholder="$15">
+                <input type="text" placeholder="Me">
+                <input type="text" placeholder="07/11/24 - 08/11/24">
+                <input type="text" placeholder="10 days" >
+                <select >
+                    <option value="completed">Completed</option>
+                    <option value="inprogress">In Progress</option>
+                    <option value="todo">To Do</option>
+                </select>
+            </div>
+            <div class="task">
+                <span>Task 2</span>
+                <input type="text" placeholder="Track all leads on Facebook">
+                <input type="text" placeholder="$15">
+                <input type="text" placeholder="Kebby 2shoods">
+                <input type="text" placeholder="07/11/24 - 08/11/24">
+                <input type="text" placeholder="10 days" >
+                <select >
+                    <option value="completed">Completed</option>
+                    <option value="inprogress">In Progress</option>
+                    <option value="todo">To Do</option>
+                </select>
+            </div>
+            <div class=" task">
+                <span>Task 3</span>
+                <input type="text" placeholder="Send Notification to all users">
+                <input type="text" placeholder="$15">
+                <input type="text" placeholder="Me">
+                <input type="text" placeholder="07/11/24 - 08/11/24">
+                <input type="text" placeholder="10 days" >
+                <select>
+                    <option value="completed">Completed</option>
+                    <option value="inprogress">In Progress</option>
+                    <option value="todo">To Do</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- /* ##############################################Save Button & Cancel Button################################################# */
+    --> <div class="form-actions"> 
+            <button class="save-button">Save</button> <!-- Save button for form -->
+            <button class="cancel-button">Cancel</button> <!-- Cancel button for form -->
+        </div>
+      
+        <!-- /* ##############################################Save Button & Cancel Button################################################# */
+    -->  
+        <div class="project-list">
+            <h3>Projects</h3> <!-- Title for project list -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lists</th>
+                        <th>Name</th>
+                        <th>Budget</th>
+                        <th>Tasks</th>
+                        <th>Expenses</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Coffee Store</td>
+                        <td>$1200</td>
+                        <td>12</td>
+                        <td>$1000</td>
+                        <td>90 days</td>
+                        <td class="status done">Done</td>
+                        <td>
+                            <button class="edit-button">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Rebrand Business</td>
+                        <td>$900</td>
+                        <td>15</td>
+                        <td>$800</td>
+                        <td>4 months</td>
+                        <td class="status done">Done</td>
+                         <td>
+                            <button class="edit-button">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td> </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Change Banners</td>
+                        <td>$6000</td>
+                        <td>2</td>
+                        <td>$5000</td>
+                        <td>1 year</td>
+                        <td class="status inprogress">In Progress</td>
+                         <td>
+                            <button class="edit-button">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td> </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ad Campaigns</td>
+                        <td>$1000</td>
+                        <td>9</td>
+                        <td>$850</td>
+                        <td>2 weeks</td>
+                        <td class="status todo">To Do</td>
+                        <td>
+                            <button class="edit-button">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>  </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="custom-footer">
+        <div class="footer-text">
+            <span>English</span> <!-- Language selector -->
+            <span>@copyrights</span> <!-- Copyright information -->
+            <span>Terms and Conditions</span> <!-- Link to Terms and Conditions -->
+            <span>Privacy</span> <!-- Link to Privacy Policy -->
+            <span>Cookie Settings</span> <!-- Cookie settings link -->
+        </div>
+        <div class="social-links">
+            <img src="../assets/logos Group.png" alt="Social Icons"> <!-- Social media icons -->
+        </div>
+    </footer>
+    <script src="../utilis/drop_down.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>

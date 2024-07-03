@@ -1,0 +1,749 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+/* Custom header styles */
+.custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #4680A6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+    /* Ensure the header is above other content */
+}
+
+.custom-header .logo img {
+    height: 40px;
+}
+
+.custom-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.custom-header nav ul li {
+    display: flex;
+}
+
+.custom-header nav ul li button {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px;
+    /* Add horizontal padding to create space */
+}
+
+.user-image {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-button img {
+    display: block;
+}
+
+/* Add margin to the user image button */
+.custom-header .user-image {
+    margin-left: 20px;
+    /* Adjust this value to add more or less space */
+}
+
+/* Dashboard column styles */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+.dashboard-column {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    height: calc(100% - 80px);
+    width: 200px;
+    background-color: #fff;
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border-right: 1px solid #DADADA;
+    overflow-y: auto;
+}
+
+.dashboard-heading {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #DADADA;
+}
+
+.dashboard-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-button.active,
+.dashboard-button:hover {
+    background-color: #F2FAFF;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin-top: 60px;
+    /* Ensure content starts below the fixed header */
+
+    /* Include padding and border in element's total width and height */
+}
+
+.profile-section {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-background {
+    width: 100vw;
+    /* Use 100vw to make it full width of the viewport */
+    height: 200px;
+    /* Adjust height as needed */
+    object-fit: cover;
+    /* Ensure the image covers the entire container */
+    margin: 0;
+    /* Remove any default margin */
+    padding: 0;
+    /* Remove any default padding */
+}
+
+.profile-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-info h2 {
+    margin-bottom: 5px;
+}
+
+.product-grid {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+hr {
+
+    border: none;
+    /* Remove the default border */
+    border-top: 2px solid lightgrey;
+    /* Set a light color */
+    transition: border-color 0.3s;
+    /* Smooth transition for the color change */
+}
+
+hr:hover {
+    border-top: 2px solid #4680A6;
+    /* Change the color to blue on hover */
+}
+
+.tabs {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0.5px solid #4680A6;
+    /* Border color and width */
+    box-shadow: 0px 0px 10px 0px rgba(70, 128, 166, 0.25);
+    /* Box shadow with rgba for transparency */
+    padding: 10px;
+    /* Padding to create space between border and content */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.tab-button {
+    padding: 10px 70px;
+    /* Increased horizontal padding */
+    min-width: 120px;
+    /* Set a minimum width */
+    border: none;
+    /* Remove individual button borders */
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    margin-left: 50px;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-details, .product-image, .product-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+.product-details {
+    text-align: left;  /* Align all content to the left by default */
+  }
+  
+  .product-details h3 {
+    text-align: left;  /* Center the product title (<h3>) */
+    color:  #4680A6;
+  }
+  
+ 
+  .product-details li {
+    margin-bottom: 5px;  /* Add spacing between list items (optional) */
+
+  }
+  
+
+.product-details p {
+    margin-bottom: 15px;
+}
+
+.product-details ul {
+    list-style: none;  /* Remove default bullet points (optional) */
+    padding-left: 0;   /* Reset default list indentation (optional) */
+  }
+  
+
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #4680A6;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(70, 128, 166, 0.25);
+}
+
+.product-form {
+    position: relative;
+    text-align: left;
+}
+
+.combined-field {
+    position: relative; /* Make the container a reference point */
+  }
+  
+  .add-button {
+    position: absolute; /* Position the button absolutely within the container */
+    top: 0; /* Place it at the top of the container */
+    right: 0; /* Place it at the right of the container */
+    /* Adjust button size and padding as needed */
+    width: 25px;
+    height: 25px;
+    padding: 5px; /* Adjust padding to avoid overlapping the field */
+    background-color: #4680A6; /* Change color as needed */
+    color: white;
+    border: none;
+    border-radius: 25%; /* Make the button circular */
+    cursor: pointer; /* Indicate interactivity */
+  }
+  
+  .form-group {
+    /* Style the form group as needed */
+    padding: 10px; /* Ensure some padding to avoid overlapping the button */
+  }
+  
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4680A6;
+}
+
+.form-group select, .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.continue-button {
+    padding: 10px 30px;
+    border: 1px solid #4680A6;
+    background-color: #4680A6;
+    color: #fff;
+    cursor: pointer;
+   
+    border-radius: 50px;
+    margin-left: 200px;
+}
+
+.continue-button:hover {
+    background-color: #fff;
+    color: #4680A6;
+}
+.order-summary1 ,.enter-details,.checkbox,.credit{
+    padding: 10px; /* Add some padding inside the border */
+    margin-bottom: 20px; /* Add some space below the border */
+    text-align: left;
+    border: 0.5px solid #4680A6;
+    border-radius: 5px;
+    /* Border color and width */
+ margin-top: 40px;
+ margin-left: 40px;
+
+    box-shadow: 0px 0px 10px 0px rgba(70, 128, 166, 0.25);
+
+  }
+  .enter-details{
+    margin-right: 40px;
+  }
+  .popup-content{
+    border: 0.5px solid #4680A6;
+    box-shadow: 0px 0px 10px 0px rgba(70, 128, 166, 0.25);
+    border-radius: 5px;
+  }
+  /* Default checkbox styles */
+input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+width: 16px;
+height: 16px;
+border: 2px solid #4680A6;
+border-radius: 3px;
+outline: none;
+cursor: pointer;
+position: relative;
+background-color: #fff;
+}
+
+/* Style for the checked state */
+input[type="checkbox"]:checked {
+background-color: #4680A6;
+border: 2px solid #4680A6;
+}
+
+/* Add a checkmark (optional) */
+input[type="checkbox"]:checked::before {
+content: '\2713';
+position: absolute;
+top: 0;
+left: 3px;
+font-size: 14px;
+color: #fff;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.popup-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;border: 0.5px solid #4680A6;
+    box-shadow: 0px 0px 10px 0px rgba(70, 128, 166, 0.25);
+    border-radius: 5px;
+  }
+  .form-group1 label {
+    display: inline-flex; /* Make label elements display inline-flex */
+    align-items: center; /* Align content vertically within the label */
+  }
+  
+  .form-group1 label img {
+    margin-right: 5px; /* Add spacing between images and text */
+  }
+  .radio-color {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #4680A6; /* Border color when unchecked */
+    border-radius: 50%; /* Circular radio button */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    margin-right: 8px; /* Space between radio button and label text */
+}
+
+/* Style for the checked state */
+.radio-color:checked {
+    background-color: #4680A6;
+    border: 10px solid #4680A6;
+}
+
+/* Custom checkmark (optional) */
+.radio-color:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.order-summary, .enter-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.order-summary h4, .enter-details h4 {
+    color: #4680A6;
+    margin-bottom: 15px;
+}
+
+.order-summary p, .enter-details .form-group {
+    margin-bottom: 10px;
+}
+
+.order-summary .checkbox {
+    text-align: left;
+}
+
+.order-summary .checkbox input {
+    margin-right: 10px;
+}
+
+ .back-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+ .back-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+/* Payment Method Popup styles */
+.payment-method {
+    text-align: center;
+}
+
+.payment-method .tabs {
+    margin-bottom: 20px;
+}
+
+.payment-method .tab-button {
+    margin: 0 5px;
+}
+
+.payment-content .form-group {
+    margin-bottom: 10px;
+}
+
+.payment-content .form-group input {
+    margin-top: 10px;
+}
+
+.payment-content .form-group label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Custom footer styles */
+.custom-footer {
+    width: 100%;
+    background: #F2FAFF;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-text span {
+    color: #4680A6;
+    font-size: 14px;
+}
+
+.social-links img {
+    height: 24px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 16px;
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+
+    .popup-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        position: relative;
+        text-align: left;
+        padding: 20px 16px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 16px;
+    }
+
+    .section-title {
+        text-align: left;
+    }
+
+    .form-group label {
+        text-align: left;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .save-button, .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .orders-list {
+        font-size: 14px;
+    }
+
+    .popup-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-image {
+        height: 30px;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 10px;
+    }
+
+    .section-title {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .form-group label {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .form-group input, .form-group select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .save-button, .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .orders-list {
+        font-size: 12px;
+    }
+
+    .orders-list th, .orders-list td {
+        padding: 5px;
+    }
+
+    .footer-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text span {
+        margin-bottom: 10px;
+    }
+
+    .popup-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+}

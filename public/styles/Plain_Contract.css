@@ -1,0 +1,181 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: transparent;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+.confirmation{
+    margin-top: 50px;
+}
+/* Container Styling */
+.email-container {
+    margin-top: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #4680A6;
+    ;
+}
+.email-container h1,label{
+    color: #4680A6;
+}
+.invoice-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.invoice-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.detail {
+    flex: 1 1 calc(50% - 10px);
+    /* Two items per row with space */
+    display: flex;
+    flex-direction: column;
+}
+
+.detail label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.detail input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.email-subject {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.email-subject label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.email-subject input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+.body {
+    margin-top: 50px;
+    padding: 20px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid  #4680A6;
+    
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+li {
+    padding: 5px 0;
+}
+
+.options .checkbox {
+    margin: 10px 0;
+}
+
+.checkbox input {
+    margin-right: 10px;
+}
+
+.actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #4680A6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: white;
+    border: 1px solid #4680A6;
+    color: #4680A6;
+}
+
+/* Default checkbox styles */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #4680A6;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+/* Style for the checked state */
+input[type="checkbox"]:checked {
+    background-color: #4680A6;
+    border: 2px solid #4680A6;
+}
+
+/* Change border and outline color to blue when input is focused */
+.input:focus {
+    border-color: #B2B2B2; /* Keep the border color same */
+    outline: 2px solid #4680A6; /* Change the outline color to blue */
+}
+
+/* Add a checkmark (optional) */
+input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 0;
+    left: 3px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .email-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .invoice-header h1,
+    .email-subject p,
+    .email-body p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        width: 100%;
+    }
+}

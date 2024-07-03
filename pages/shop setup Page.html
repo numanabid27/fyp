@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Page</title>
+    <link rel="stylesheet" href="../styles/shop setup Page.css"> <!-- Link to external CSS -->
+</head>
+
+<body>
+
+    <header class="custom-header">
+        <div class="logo">
+            <img src="../assets/business boss1.png" alt="Logo"> <!-- Business logo -->
+        </div>
+        <nav>
+            <ul>
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_service'">Services</button></li> <!-- Navigation button for Services -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_product'">Products</button></li> <!-- Navigation button for Products -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_shop'">View Shop</button></li> <!-- Navigation button for View Shop -->
+                <li class="dropdown">
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <!-- Dropdown button for user with admin icon -->
+                    <div class="dropdown-content">
+                        <a href="#">Help</a> <!-- Dropdown link for Help -->
+                        <a href="#">Password</a> <!-- Dropdown link for Password -->
+                        <a href="/dashboard_subscription">Subscription</a> <!-- Dropdown link for Subscription -->
+                        <a href="/login">Log Out</a> <!-- Dropdown link for Log Out -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-column">
+        <a href="/dashboard">
+            <h2 class="dashboard-heading">Dashboard</h2>
+        </a>
+        <div class="dashboard-links">
+            <button class="dashboard-button active" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="setup-container">
+            <div class="setup-heading">
+                <h3 class="setup-title">Set Up</h3> <!-- Setup page title -->
+            </div>
+
+            <div class="tab-buttons">
+                <button class="tab-button active">Shop Setup</button> <!-- Active tab button for Shop Setup -->
+                <button class="tab-button" onclick="window.location.href='/dashboard_shopSetup_integration'">Integration</button> <!-- Tab button for Integration -->
+                <button class="tab-button" onclick="window.location.href='/dashboard_shopSetup_team'">Team Members</button> <!-- Tab button for Team Members -->
+            </div>
+
+            <div class="form-container">
+                <div class="image-upload">
+                    <div class="image-container">
+                        <img src="../assets/Rectangle 123.png" alt="Upload Photo"> <!-- Placeholder image -->
+                        <button class="upload-button">Upload Photo</button> <!-- Button to upload photo -->
+                    </div>
+                </div>
+
+                <!-- Form inputs for business setup -->
+                <div class="form-group">
+                    <label for="business-name">Business Name</label>
+                    <input type="text" id="business-name" name="business-name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="Your Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="united-kingdom">United Kingdom</option> <!-- Country options -->
+                        <option value="united-states">United States</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="shop-link">Your Shop Link</label>
+                    <div class="shop-link-container">
+                        <span>businesspro.com/</span> <!-- Static part of shop link -->
+                        <input type="text" id="shop-link" name="shop-link" placeholder="Enter Business Name">
+                    </div>
+                    <button class="embed-button">Embed in website</button> <!-- Button to embed shop link -->
+                </div>
+                
+                <div class="form-group">
+                    <label for="slogan">Welcome Text or Slogan</label>
+                    <input type="text" id="slogan" name="slogan" placeholder="Welcome! Book an appointment or place your orders">
+                </div>
+                <div class="form-group">
+                    <label for="timezone">Time Zone</label>
+                    <select id="timezone" name="timezone">
+                        <option value="gmt">United Kingdom, GMT Time</option> <!-- Timezone options -->
+                        <option value="est">United States, EST Time</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="currency">Currency</label>
+                    <select id="currency" name="currency">
+                        <option value="usd">US Dollars $</option> <!-- Currency options -->
+                        <option value="gbp">British Pounds £</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="group">
+                    <!-- Switches to show/hide different content -->
+                    <label class="label-custom">Show Both</label>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <label class="label-custom">Show Products Only</label>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <label class="label-custom">Show Services Only</label>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    
+                </div>
+                
+                <div class="form-actions">
+                    <button class="save-button">Save Changes</button> <!-- Button to save changes -->
+                    <button class="cancel-button">Cancel</button> <!-- Button to cancel -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="custom-footer">
+        <div class="footer-text">
+            <span>@copyrights</span> <!-- Copyright information -->
+            <span>Terms and Conditions</span> <!-- Link to Terms and Conditions -->
+            <span>Privacy</span> <!-- Link to Privacy Policy -->
+            <span>Cookie Settings</span> <!-- Cookie settings link -->
+            <span>English</span> <!-- Language selector -->
+        </div>
+        <div class="social-links">
+            <img src="../assets/logos Group.png" alt="Social Icons"> <!-- Social media icons -->
+        </div>
+    </footer>
+    <script src="../utilis/drop_down.js"></script> <!-- Link to external JavaScript file -->
+</body>
+
+</html>

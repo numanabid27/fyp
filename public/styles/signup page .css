@@ -1,0 +1,752 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    /* Set font family */
+    line-height: 1.6;
+    /* Set line height */
+    color: #333;
+    /* Default text color */
+}
+
+/* Header styles */
+header {
+    background: #4680A6;
+    /* Header background color */
+    padding: 1rem 0;
+    /* Padding top and bottom */
+}
+
+/* Container styles within header */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styles within header */
+header .logo img {
+    height: 40px;
+    /* Fixed height for logo */
+}
+
+/* Navigation styles within header */
+header nav ul {
+    list-style: none;
+    /* Remove default list styles */
+    display: flex;
+    gap: 1rem;
+    /* Gap between navigation items */
+}
+
+/* Navigation links styles */
+header nav ul li a {
+    text-decoration: none;
+    /* Remove underline */
+    color: white;
+    /* Text color */
+}
+
+/* Login button styles */
+.login-btn {
+    /* Shared styles with signup-btn */
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    background: none;
+    color: white;
+}
+
+/* Signup button styles */
+.signup-btn {
+    /* Shared styles with login-btn */
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    background: white;
+    color: #4680A6;
+}
+
+/* Custom button styles */
+.custom-button {
+    /* Transparent background, custom color */
+    background-color: transparent;
+    color: #B9DEFF;
+    border: none;
+    /* Remove border */
+    padding: 10px 10px;
+    /* Padding */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font: inherit;
+    /* Inherit font styles */
+    border-radius: 5px;
+    /* Rounded corners */
+    outline: none;
+    /* Remove outline */
+}
+
+/* Additional custom button styles */
+.custom-button1 {
+    /* Transparent background, white text */
+    background-color: transparent;
+    color: white;
+    border: none;
+    /* Remove border */
+    padding: 10px 10px;
+    /* Padding */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font: inherit;
+    /* Inherit font styles */
+    border-radius: 5px;
+    /* Rounded corners */
+    outline: none;
+    /* Remove outline */
+}
+
+/* Google login button styles */
+.google-login {
+    /* Custom dimensions and styles */
+    width: 299.74px;
+    height: 48.51px;
+    padding: 13.86px 8.66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8.66px;
+    border-radius: 43.32px 0px 0px 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 12.99px 43.32px 0px rgba(91, 129, 180, 0.12);
+    opacity: 1;
+    border: none;
+    /* Remove border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    margin: 1rem auto;
+    /* Center horizontally */
+}
+
+/* Google icon styles within Google login button */
+.google-login .google-icon {
+    width: 20.79px;
+    height: 20.79px;
+    padding: 1.74px 2.43px 2.05px 1.36px;
+    opacity: 1;
+}
+
+/* Text styles within Google login button */
+.google-login .google-text {
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 13.86px;
+    line-height: 16.24px;
+    text-align: left;
+    color: #4680A6;
+    opacity: 1;
+}
+
+/* Back link styles */
+.back-link {
+    padding: 25px;
+    /* Padding */
+    font-family: Roboto;
+    /* Font family */
+    font-size: 16px;
+    /* Font size */
+    font-weight: 400;
+    /* Font weight */
+    text-align: left;
+    /* Text alignment */
+    color: rgba(109, 109, 109, 1);
+    /* Text color */
+    background-color: rgba(255, 255, 255, 0);
+    /* Transparent background */
+}
+
+/* Back arrow image styles within back link */
+.back-link img {
+    vertical-align: middle;
+    /* Align vertically */
+}
+
+/* Choice text styles */
+.choice {
+    padding: 25px;
+    /* Padding */
+    font-family: Roboto;
+    /* Font family */
+    font-size: 16px;
+    /* Font size */
+    font-weight: 400;
+    /* Font weight */
+    text-align: left;
+    /* Text alignment */
+    color: rgba(109, 109, 109, 1);
+    /* Text color */
+    background-color: rgba(255, 255, 255, 0);
+    /* Transparent background */
+}
+
+/* Create account heading styles */
+.create-account-heading {
+    font-family: Roboto, Arial, sans-serif;
+    /* Font family */
+    font-size: 30px;
+    /* Font size */
+    font-weight: 400;
+    /* Font weight */
+    line-height: 35.16px;
+    /* Line height */
+    text-align: left;
+    /* Text alignment */
+    color: rgba(70, 128, 166, 1);
+    /* Text color */
+    padding: 30px;
+    /* Padding */
+    margin: 0;
+    /* Margin */
+}
+
+/* Sign up button styles */
+.Up-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 43px;
+    background: linear-gradient(350.53deg, #4680A6 9.42%, #B9DEFF 127.53%);
+    /* Gradient background */
+    color: white;
+    /* Text color */
+    border: none;
+    /* Remove border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    margin: 1rem auto;
+    /* Center horizontally */
+    width: 299.74px;
+    /* Fixed width */
+    height: 48.51px;
+    /* Fixed height */
+    box-shadow: 0px 5px 30px 0px rgba(105, 144, 192, 0.5);
+    /* Box shadow */
+}
+
+/* Main section styles */
+main {
+    padding: 2rem 0;
+    /* Padding top and bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container styles for registration section */
+.container.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    /* Gap between items */
+}
+
+/* Register box styles */
+.register-box {
+    background: white;
+    /* Background color */
+    padding: 2rem;
+    /* Padding */
+    border-radius: 0 10px 10px 0;
+    /* Rounded corners */
+    box-shadow: 0px 5px 30px rgba(105, 144, 192, 0.5);
+    /* Box shadow */
+    width: 730px;
+    /* Fixed width */
+    height: 807px;
+    /* Fixed height */
+    text-align: center;
+    /* Text alignment */
+    gap: 0;
+    /* Gap between items */
+}
+
+/* Login link styles */
+.login-link {
+    position: relative;
+    /* Relative positioning */
+    top: 550px;
+    /* Position from top */
+    left: 0;
+    /* Position from left */
+    width: 100%;
+    /* Full width */
+    text-align: center;
+    /* Text alignment */
+    color: #FAFBFF;
+    /* Text color */
+}
+
+/* Link styles within login link */
+.login-link a {
+    color: #B9DEFF;
+    /* Link text color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+/* Welcome box styles */
+.welcome-box {
+    position: relative;
+    /* Relative positioning */
+    background: linear-gradient(to top, #4680A6 0%, #B9DEFF 100%);
+    /* Gradient background */
+    width: 506px;
+    /* Fixed width */
+    height: 807px;
+    /* Fixed height */
+    padding: 2rem;
+    /* Padding */
+    border-radius: 10px 0 0 10px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    /* Box shadow */
+    text-align: center;
+    /* Text alignment */
+}
+
+/* Image container styles */
+.image-container {
+    position: absolute;
+    /* Absolute positioning */
+    top: 50%;
+    /* Position from top */
+    left: 50%;
+    /* Position from left */
+    transform: translate(-50%, -50%);
+    /* Center image */
+}
+
+/* Image styles within image container */
+.image-container img {
+    max-width: 100%;
+    /* Maximum width */
+    height: auto;
+    /* Automatic height */
+}
+
+/* Welcome box heading styles */
+.welcome-box h2 {
+    font-family: 'Roboto', sans-serif;
+    /* Font family */
+    font-size: 30px;
+    /* Font size */
+    font-weight: 400;
+    /* Font weight */
+    line-height: 35.16px;
+    /* Line height */
+    text-align: center;
+    /* Text alignment */
+    color: #4680A6;
+    /* Text color */
+    margin-top: 70px;
+    /* Margin from the top */
+}
+
+/* First paragraph styles within welcome box */
+.welcome-box p:first-of-type {
+    font-family: 'Roboto', sans-serif;
+    /* Font family */
+    font-size: 16px;
+    /* Font size */
+    font-weight: 400;
+    /* Font weight */
+    line-height: 18.75px;
+    /* Line height */
+    text-align: center;
+    /* Text alignment */
+    color: #FAFBFF;
+    /* Text color */
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    /* Vertical layout */
+    gap: 1rem;
+    /* Gap between elements */
+}
+
+/* Form row styles */
+form .form-row {
+    display: flex;
+    gap: 1rem;
+    /* Gap between form fields */
+}
+
+/* Label styles within form */
+form label {
+    color: rgba(70, 128, 166, 1);
+    /* Text color */
+    font-family: Roboto;
+    /* Font family */
+    font-size: 16px;
+    /* Font size */
+    font-weight: 400;
+    /* Font weight */
+    line-height: 18.75px;
+    /* Line height */
+    text-align: left;
+    /* Text alignment */
+    display: block;
+    /* Block element */
+    margin-bottom: 0.5rem;
+    /* Margin bottom */
+}
+
+/* Input field styles within form */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 299.74px;
+    /* Fixed width */
+    height: 48.51px;
+    /* Fixed height */
+    padding: 13.86px 20.79px;
+    /* Padding */
+    border-radius: 43.32px;
+    /* Rounded corners */
+    border: 0.87px solid rgba(234, 235, 246, 1);
+    /* Border */
+    background: rgba(255, 255, 255, 1);
+    /* Background color */
+}
+
+/* Custom link container styles */
+form .custom-link-container {
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Center alignment */
+}
+
+/* Wide input styles within custom link container */
+form .custom-link-container input[type="text"] {
+    flex-grow: 1;
+    /* Grow to fill available space */
+    margin-left: 0.5rem;
+    /* Margin left */
+}
+
+/* Terms and Remember me label styles */
+form label.terms,
+form label.remember-me {
+    font-weight: normal;
+    /* Normal font weight */
+    font-size: 0.875rem;
+    /* Font size */
+    color: rgba(109, 109, 109, 1);
+    /* Text color */
+}
+
+/* Link styles within terms label */
+form label.terms a {
+    text-decoration: underline;
+    /* Underline link */
+}
+
+/* Checkbox input styles for terms and remember me */
+form label.terms input,
+form label.remember-me input {
+    margin-right: 0.5rem;
+    /* Margin right */
+}
+
+/* Footer styles */
+footer {
+    background: rgba(242, 250, 255, 1);
+    /* Background color */
+    padding: 1rem 0;
+    /* Padding top and bottom */
+    text-align: center;
+    /* Text alignment */
+}
+
+/* Footer links and social links container styles */
+footer .footer-links,
+footer .social-links {
+    display: flex;
+    /* Flex container */
+    justify-content: center;
+    /* Center alignment */
+    gap: 1rem;
+    /* Gap between links */
+    margin-bottom: 0.5rem;
+    /* Margin bottom */
+}
+
+/* Footer link styles */
+footer .footer-links a {
+    color: rgba(70, 128, 166, 1);
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+/* Hover state for footer links */
+footer .footer-links a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+/* Social media icon styles within social links */
+footer .social-links img {
+    height: 40px;
+    /* Fixed height for icons */
+}
+
+/* Custom checkbox styles for Remember me */
+.remember-me input[type="checkbox"] {
+    appearance: none;
+    /* Remove default appearance */
+    -webkit-appearance: none;
+    /* Webkit support */
+    -moz-appearance: none;
+    /* Firefox support */
+    width: 16px;
+    /* Width */
+    height: 16px;
+    /* Height */
+    border: 2px solid #B9DEFF;
+    /* Border color when unchecked */
+    border-radius: 3px;
+    /* Rounded corners */
+    outline: none;
+    /* Remove outline */
+    cursor: pointer;
+    /* Pointer cursor */
+    position: relative;
+    /* Relative positioning */
+    background-color: #fff;
+    /* Background color */
+}
+
+/* Checked state styles for Remember me */
+.remember-me input[type="checkbox"]:checked {
+    background-color: #B9DEFF;
+    /* Background color when checked */
+    border: 2px solid #B9DEFF;
+    /* Border color when checked */
+}
+
+/* Checkmark styles for Remember me */
+.remember-me input[type="checkbox"]:checked::before {
+    content: '\2713';
+    /* Unicode for checkmark */
+    position: absolute;
+    /* Absolute positioning */
+    top: 0;
+    /* Position from top */
+    left: 3px;
+    /* Position from left */
+    font-size: 14px;
+    /* Font size */
+    color: #fff;
+    /* Text color */
+}
+
+/* Custom checkbox styles for Terms */
+.terms input[type="checkbox"] {
+    appearance: none;
+    /* Remove default appearance */
+    -webkit-appearance: none;
+    /* Webkit support */
+    -moz-appearance: none;
+    /* Firefox support */
+    width: 16px;
+    /* Width */
+    height: 16px;
+    /* Height */
+    border: 2px solid #B9DEFF;
+    /* Border color when unchecked */
+    border-radius: 3px;
+    /* Rounded corners */
+    outline: none;
+    /* Remove outline */
+    cursor: pointer;
+    /* Pointer cursor */
+    position: relative;
+    /* Relative positioning */
+    background-color: #fff;
+    /* Background color */
+}
+
+/* Checked state styles for Terms */
+.terms input[type="checkbox"]:checked {
+    background-color: #B9DEFF;
+    /* Background color when checked */
+    border: 2px solid #B9DEFF;
+    /* Border color when checked */
+}
+
+/* Checkmark styles for Terms */
+.terms input[type="checkbox"]:checked::before {
+    content: '\2713';
+    /* Unicode for checkmark */
+    position: absolute;
+    /* Absolute positioning */
+    top: 0;
+    /* Position from top */
+    left: 3px;
+    /* Position from left */
+    font-size: 14px;
+    /* Font size */
+    color: #fff;
+    /* Text color */
+}
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .login-container {
+        flex-direction: column;
+    }
+
+    /* Hide the checkbox */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Hide the nav by default */
+    header nav {
+        display: none;
+    }
+
+    /* Show the navbar when the checkbox is checked */
+    #menu-toggle:checked + .menu-button + nav {
+        display: block;
+        position: absolute;
+        background: rgba(70, 128, 166, 1);
+        top: 80px;
+        width: 100%;
+        left: 0;
+        z-index: 1000; /* Ensure navbar appears above other content */
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul {
+        flex-direction: column;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul li {
+        margin: 1rem 0;
+    }
+    /* Updated header styles */
+    header {
+    width: 100%;
+    background: #4680A6;
+    padding: 1rem 0;
+}
+
+/* Updated footer styles */
+footer {
+    width: 100%;
+    background: rgba(242, 250, 255, 1);
+    padding: 1rem 0;
+    text-align: center;
+}
+}
+
+@media (min-width: 769px) {
+    /* Hide the menu button and show nav normally */
+    .menu-button {
+        display: none;
+    }
+    /* Ensure the menu toggle checkbox is hidden */
+    #menu-toggle {
+        display: none;
+    }
+    /* Show the header navigation */
+    header nav {
+        display: flex;
+    }
+    * Updated header styles */
+    header {
+    width: 100%;
+    background: #4680A6;
+    padding: 1rem 0;
+}
+
+/* Updated footer styles */
+footer {
+    width: 100%;
+    background: rgba(242, 250, 255, 1);
+    padding: 1rem 0;
+    text-align: center;
+}
+}
+@media (max-width:480px) {
+    main {
+        flex-direction: column;
+    }
+
+    .login-container {
+        flex-direction: column;
+    }
+
+    /* Hide the checkbox */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Hide the nav by default */
+    header nav {
+        display: none;
+    }
+
+    /* Show the navbar when the checkbox is checked */
+    #menu-toggle:checked + .menu-button + nav {
+        display: block;
+        position: absolute;
+        background: rgba(70, 128, 166, 1);
+        top: 80px;
+        width: 100%;
+        left: 0;
+        z-index: 1000; /* Ensure navbar appears above other content */
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul {
+        flex-direction: column;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul li {
+        margin: 1rem 0;
+    }
+    /* Updated header styles */
+    header {
+    /* width: 100%; */
+    background: #4680A6;
+    padding: 2rem 0;
+}
+
+/* Updated footer styles */
+footer {
+    width: 100%;
+    background: rgba(242, 250, 255, 1);
+    padding: 1rem 0;
+    text-align: center;
+}
+header {
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+}
+    
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders & Invoices</title>
+    <link rel="stylesheet" href="../styles/orders page.css"> <!-- Linking external CSS -->
+</head>
+
+<body>
+    <header class="custom-header">
+        <div class="logo">
+            <img src="../assets/business boss1.png" alt="Logo">
+        </div>
+        <input type="checkbox" id="menu-toggle"> <!-- Hidden checkbox for toggling the nav -->
+        <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
+        <nav>
+            <ul>
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_service'">Services</button></li> <!-- Navigation button for Services -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_product'">Products</button></li> <!-- Navigation button for Products -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_shop'">View Shop</button></li> <!-- Navigation button for View Shop -->
+                <li class="dropdown">
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <div class="dropdown-content">
+                        <a href="#">Help</a> <!-- Dropdown link for Help -->
+                        <a href="#">Password</a> <!-- Dropdown link for Password -->
+                        <a href="/dashboard_subscription">Subscription</a> <!-- Dropdown link for Subscription -->
+                        <a href="/login">Log Out</a> <!-- Dropdown link for Log Out -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="dashboard-column">
+            <a href="/dashboard">
+                <h2 class="dashboard-heading">Dashboard</h2>
+            </a>
+            <div class="dashboard-links">
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+                <button class="dashboard-button active" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
+            </div>
+        </div>
+
+        <main>
+            <div class="orders-invoices">
+                <div class="tab-buttons">
+                    <button class="tab-button active">Orders</button> <!-- Active tab button for Orders -->
+                    <button class="tab-button" onclick="window.location.href='/dashboard_invoice'">Invoices</button> <!-- Tab button for Invoices -->
+                </div>
+                <button class="create-order-button">+ Create new order</button> <!-- Button to create a new order -->
+
+                <!-- Form for creating an order -->
+                <form class="order-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="order-date">Order Date</label>
+                            <input type="date" id="order-date" name="order-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="select-client">Select Client</label>
+                            <select id="select-client" name="select-client">
+                                <option value="select">Select</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="order-channel">Order Channel</label>
+                            <select id="order-channel" name="order-channel">
+                                <option value="online">Online</option>
+                                <option value="physical">Physical</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="select-order">Select Order</label>
+                            <select id="select-order" name="select-order">
+                                <option value="choose">Choose</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="payment-method">Payment Method</label>
+                            <select id="payment-method" name="payment-method">
+                                <option value="select">Select</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Delivery-method">Delivery Method</label>
+                            <select id="Delivery-method" name="Delivery-method">
+                                <option value="select">Select</option>
+                                <!-- Add more options as needed -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Notes</label>
+                            <input type="text" id="notes" name="notes">
+                        </div>
+                    </div>
+                    <div class="form-group horizontal-radio-group">
+                        <label style="font-weight: bold;">Is this order paid?</label>
+                        <div class="radio-buttons">
+                            <label><input class="radio-color" type="radio" name="paid" value="yes"> Yes</label>
+                            <label><input class="radio-color" type="radio" name="paid" value="no" checked> No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group vertical-radio-group">
+                        <label style="font-weight: bold;">Do you want to send Invoice for this order?</label>
+                        <label style="color: #000000;"><input class="radio-color" type="radio" name="invoice" value="dont-send" checked> Don't send invoice</label>
+                        <label style="color: #000000;"><input class="radio-color" type="radio" name="invoice" value="send-with-link"> Send invoice with Payment link</label>
+                        <label style="color: #000000;"><input class="radio-color" type="radio" name="invoice" value="send-without-link"> Send invoice without Payment link</label>
+                    </div>
+                    <div class="form-actions">
+                        <button class="save-button">Create</button> <!-- Button to create the order -->
+                        <button class="cancel-button">Cancel</button> <!-- Button to cancel creating the order -->
+                    </div>
+                </form>
+
+                <h2 class="orders-list-title" style="color: #4680A6;">Orders</h2>
+                <!-- Table displaying list of orders -->
+                <table class="orders-list">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Client</th>
+                            <th>Date</th>
+                            <th>Order Channel</th>
+                            <th>Order Name</th>
+                            <th>Order Message</th>
+                            <th>Payment Method</th>
+                            <th>Payment Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>156</td>
+                            <td>LEE</td>
+                            <td>29/9/2023</td>
+                            <td>Online</td>
+                            <td>Coffee machines ($12)</td>
+                            <td>Yes there is</td>
+                            <td>Online</td>
+                            <td>Paid</td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="cancel">Cancel</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>156</td>
+                            <td>JON</td>
+                            <td>29/9/2023</td>
+                            <td>Online</td>
+                            <td>Business Class ($10)</td>
+                            <td>None</td>
+                            <td>Online</td>
+                            <td>Unpaid</td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="cancel">Cancel</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>156</td>
+                            <td>AAFI</td>
+                            <td>29/9/2023</td>
+                            <td>Online</td>
+                            <td>1-to-1 coaching ($0)</td>
+                            <td>Yes there is</td>
+                            <td>None</td>
+                            <td>Paid</td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="cancel">Cancel</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>156</td>
+                            <td>PETE</td>
+                            <td>29/9/2023</td>
+                            <td>In Person</td>
+                            <td>Mentorship ($123)</td>
+                            <td>None</td>
+                            <td>In Person</td>
+                            <td>Partially Paid</td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="cancel">Cancel</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer class="custom-footer">
+        <div class="footer-text">
+            <span>English</span> <!-- Language selector -->
+            <span>@copyrights</span> <!-- Copyright information -->
+            <span>Terms and Conditions</span> <!-- Link to Terms and Conditions -->
+            <span>Privacy</span> <!-- Link to Privacy Policy -->
+            <span>Cookie Settings</span> <!-- Cookie settings link -->
+        </div>
+        <div class="social-links">
+            <img src="../assets/logos Group.png" alt="Social Icons"> <!-- Social media icons -->
+        </div>
+    </footer>
+
+    <script src="../utilis/drop_down.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>

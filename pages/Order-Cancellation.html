@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../styles/Order-Cancellation.css"> <!-- Linking external CSS -->
+</head>
+
+<body>
+    <header class="custom-header">
+        <div class="logo">
+            <img src="../assets/business boss1.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><button class="nav-button">Orders</button></li> <!-- Navigation button for Orders -->
+
+                <li class="dropdown">
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <div class="dropdown-content">
+                        <a href="#">Log In</a> <!-- Dropdown link for Login -->
+                        <a href="#">Register</a> <!-- Dropdown link for Register -->
+                        <a href="#">Contact Us</a> <!-- Dropdown link for Contact Us -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="profile-section">
+                <img src="../assets/order products bg image.png" alt="Background" class="profile-background" "> <!-- Background image for profile section -->
+                <div class=" profile-info">
+                <img src="../assets/admin.png" alt="John Doe" class="profile-pic"> <!-- Profile picture -->
+                <h2>John Doe</h2> <!-- User name -->
+                <p>Your Smile, Our Priority</p> <!-- Profile tagline -->
+            </div>
+    </div>
+
+   
+    <!-- Product Grid -->
+    <div class="MyOrder">
+
+        <h2 class="section-title">My Orders</h2>
+        <table class="product-inventory-table">
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Name</td>
+                    <td>9:30 AM</td>
+                    <td>28 Aug 2023</td>
+                    <td>Confirmed</td>
+                    <td>
+                        <button class="save-button">Reschedule</button>
+                        <button class="cancel-button"
+                            onclick="openCancelOrderPopup('1 to 1 coaching', '40 mins @ $20', '11:00 AM, August 31, 2024')">Cancel</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Name</td>
+                    <td>10:00 AM</td>
+                    <td>29 Aug 2023</td>
+                    <td>Pending</td>
+                    <td>
+
+                        <button class="save-button">Reschedule</button>
+                        <button class="cancel-button"
+                            onclick="openCancelOrderPopup('1 to 1 coaching', '40 mins @ $20', '11:00 AM, August 31, 2024')">Cancel</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Name</td>
+                    <td>10:30 AM</td>
+                    <td>30 Aug 2023</td>
+                    <td>Confirmed</td>
+                    <td>
+
+                        <button class="save-button">Reschedule</button>
+                        <button class="cancel-button"
+                            onclick="openCancelOrderPopup('1 to 1 coaching', '40 mins @ $20', '11:00 AM, August 31, 2024')">Cancel</button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Name</td>
+                    <td>11:00 AM</td>
+                    <td>31 Aug 2023</td>
+                    <td>Pending</td>
+                    <td>
+
+
+                        <button class="save-button">Reschedule</button>
+                        <button class="cancel-button"
+                            onclick="openCancelOrderPopup('1 to 1 coaching', '40 mins @ $20', '11:00 AM, August 31, 2024')">Cancel</button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    </div>
+    </main>
+    </div>
+    <div id="cancel-order-popup" class="popup">
+        <div class="popup-content">
+            <h3>Cancel Order</h3>
+            <a href="#" >View Cancellation Policy</a>
+            <div class="popup-sections">
+                <div class="order-summary">
+                    <h4>Order summary</h4>
+                    <p id="order-summary-details"></p>
+                </div>
+                <div class="cancel-details">
+                    <h4>Reason for Canceling</h4>
+                    <textarea id="cancel-reason" placeholder="Briefly explain your reason for canceling."></textarea>
+                    <button class="continue-button" onclick="confirmCancelOrder()">Cancel</button>
+                    <button class="back-button" onclick="closePopup('cancel-order-popup')">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirm-cancel-popup" class="popup">
+        <div class="popup-content">
+            <p>Are you sure you want to cancel the order?</p>
+            <div class="checkbox">
+                <input type="checkbox" id="send-notification">
+                <label for="send-notification">Send cancellation notification</label>
+            </div>
+            <button class="back-button" onclick="closePopup('confirm-cancel-popup')">Back</button>
+            <button class="confirm-button" onclick="finalizeCancelOrder()">Yes</button>
+        </div>
+    </div>
+    <footer class="custom-footer">
+        <div class="footer-text">
+            <span>English</span> <!-- Language selector -->
+            <span>@copyrights</span> <!-- Copyright information -->
+            <span>Terms and Conditions</span> <!-- Link to Terms and Conditions -->
+            <span>Privacy</span> <!-- Link to Privacy Policy -->
+            <span>Cookie Settings</span> <!-- Cookie settings link -->
+        </div>
+        <div class="social-links">
+            <img src="../assets/logos Group.png" alt="Social Icons"> <!-- Social media icons -->
+        </div>
+    </footer>
+
+    <script src="../utilis/drop_down.js"></script> <!-- Link to external JavaScript file -->
+    <script src="../utilis/customer_order_cancelation.js"></script>
+
+</body>
+
+</html>

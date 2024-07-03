@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders & Invoices</title>
+    <link rel="stylesheet" href="../styles/SuperAdmin-OrdersPage(Acttive Invoice).css"> <!-- Link to external CSS -->
+    <style>
+        /* Inline styles for specific layout adjustments */
+        .invoice-address, .invoice-dates {
+            display: flex; /* Use flexbox to align children in a row */
+            gap: 50px; /* Spacing between flex items */
+        }
+
+        .invoice-dates p, .invoice-address p {
+            margin: 0; /* Remove default margins for paragraphs */
+        }
+
+        .invoice-totals {
+            margin-left: 900px; /* Adjusted left margin for totals section */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="custom-header">
+        <div class="logo">
+            <img src="../assets/business boss1.png" alt="Logo">
+        </div>
+        <input type="checkbox" id="menu-toggle"> <!-- Hidden checkbox for toggling the nav -->
+        <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <button class="nav-button user-image-btn"><img src="../assets/admin.png" alt="User"
+                            class="user-image"></button>
+                    <div class="dropdown-content">
+                        <a href="/homepage">View site</a>
+                        <a href="/login">logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="dashboard-column">
+            <h2 class="dashboard-heading">Dashboard</h2>
+            <div class="dashboard-links">
+                <button class="dashboard-button">Members</button> <!-- Dashboard button for Set Up -->
+                <button class="dashboard-button">Plan</button> <!-- Dashboard button for Projects -->
+                <button class="dashboard-button">Landing Page</button> <!-- Dashboard button for Clients -->
+                <button class="dashboard-button active">Orders</button> <!-- Active dashboard button for Orders & Invoices -->
+                <button class="dashboard-button">Notifications</button> <!-- Dashboard button for Notifications -->
+                <button class="dashboard-button">Settings</button>
+            </div>
+        </div>
+
+        <main>
+            <div class="button-container">
+                <div class="tab-buttons">
+                    <button class="tab-button " onclick="window.location.href='/Superdashboard_orders'">Orders</button> <!-- Tab button for Orders -->
+                    <button class="tab-button active">Invoices</button> <!-- Active tab button for Invoices -->
+                </div>
+            </div>
+            <h1 class="Invoices-title" style="color: #4680A6;">Invoices</h1> <!-- Title for Invoices section -->
+
+            <div class="orders-invoices">
+                <!-- Detailed invoice section -->
+                <div class="invoice-detail">
+                    <div class="invoice-header">
+                        <div class="invoice-info">
+                            <div class="top-row">
+                                <img src="../assets/OP.png" alt="Company Logo">
+                                <p>INV-0019</p> <!-- Invoice ID -->
+                            </div>
+                            <p class="down-row">ACME Inc.</p> <!-- Company name -->
+                        </div>
+                        <div class="invoice-actions">
+                            <p class="Payment_text">Send Invoice Reminder with Payment Link</p> <!-- Payment reminder text -->
+                            <button class="download-button">Download</button> <!-- Download button for invoice -->
+                        </div>
+                    </div>
+                    <img src="../assets/business boss1.png" alt="" style="display: inline;"> <!-- Placeholder image -->
+                    <div class="invoice-status-paid">PAID</div> <!-- Invoice status -->
+                    <p class="invoice">Invoice</p> <!-- Invoice title -->
+                    <p class="invoice">#5ecb86785312dcc69b5799ad</p> <!-- Invoice number -->
+                    <div class="invoice-address">
+                        <!-- Address section -->
+                        <div>
+                            <p>Street King William, 123</p>
+                            <p>Level 2, C, 442456</p>
+                            <p>San Francisco, CA, USA</p>
+                        </div>
+                        <div>
+                            <p>Company No. 4675933</p>
+                            <p>EU VAT No. 949 6754 45</p>
+                        </div>
+                        <div>
+                            <p>Email: accounts@devas.io</p>
+                            <p>Tel: (+40) 652 3456 23</p>
+                        </div>
+                    </div>
+                    <div class="invoice-dates">
+                        <!-- Dates section -->
+                        <div>
+                            <p>Due date: 16 Feb 2021</p>
+                        </div>
+                        <div>
+                            <p>Date of issue: 16 Feb 2021</p>
+                        </div>
+                        <div>
+                            <p>Number: DEV-9483</p>
+                        </div>
+                    </div>
+                    <div class="invoice-bill-to">
+                        <h4>Billed to</h4> <!-- Billed to section -->
+                        <p>Ana Henisky</p>
+                        <p>Countdown Grey Lynn</p>
+                        <p>693465584231</p>
+                        <p>271 Richmond Rd, Grey Lynn, Auckland 1022, New Zealand</p>
+                    </div>
+                    <div class="invoice-description">
+                        <h4>Description</h4> <!-- Description section -->
+                        <p>Freelance Subscription (12/05/2019 - 11/06/2019)</p>
+                    </div>
+                    <div class="invoice-totals">
+                        <h4>Unit Price</h4> <!-- Totals section -->
+                        <div>
+                            <p>Subtotal: $55.50</p>
+                        </div>
+                        <div>
+                            <p>Taxes: $50.00</p>
+                        </div>
+                        <div>
+                            <p>Total: $55.50</p>
+                        </div>
+                    </div>
+                    <div class="invoice-notes">
+                        <h4>Notes</h4> <!-- Notes section -->
+                        <p>Please make sure you have the right bank registration number as I had issues before and make
+                            sure you guys cover transfer</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="custom-footer">
+        <div class="footer-text">
+            <span>English</span> <!-- Language selector -->
+            <span>@copyrights</span> <!-- Copyright information -->
+            <span>Terms and Conditions</span> <!-- Link to Terms and Conditions -->
+            <span>Privacy</span> <!-- Link to Privacy Policy -->
+            <span>Cookie Settings</span> <!-- Cookie settings link -->
+        </div>
+        <div class="social-links">
+            <img src="../assets/logos Group.png" alt="Social Icons"> <!-- Social media icons -->
+        </div>
+    </footer>
+    <script src="../utilis/drop_down.js"></script> <!-- Link to external JavaScript file -->
+</body>
+
+</html>

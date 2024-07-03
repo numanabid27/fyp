@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../styles/shop(business owner view).css"> <!-- Linking external CSS -->
+</head>
+
+<body>
+    <header class="custom-header">
+        <div class="logo">
+            <img src="../assets/business boss1.png" alt="Logo">
+        </div>
+        <input type="checkbox" id="menu-toggle"> <!-- Hidden checkbox for toggling the nav -->
+        <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
+        <nav>
+            <ul>
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_service'">Services</button></li> <!-- Navigation button for Services -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_product'">Products</button></li> <!-- Navigation button for Products -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_shop'">View Shop</button></li> <!-- Navigation button for View Shop -->
+
+                <li class="dropdown">
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <div class="dropdown-content">
+                        <a href="#">Help</a> <!-- Dropdown link for Login -->
+                        <a href="#">Password</a> <!-- Dropdown link for Register -->
+                        <a href="/dashboard_subscription">Subscription</a> <!-- Dropdown link for Subscription -->
+                        <a href="/login">Log Out</a> <!-- Dropdown link for Log Out -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="profile-section">
+                <img src="../assets/order products bg image.png" alt="Background" class="profile-background" > <!-- Background image for profile section -->
+                <div class=" profile-info">
+                <img src="../assets/admin.png" alt="John Doe" class="profile-pic"> <!-- Profile picture -->
+                <h2>John Doe</h2> <!-- User name -->
+                <p>Your Smile, Our Priority</p> <!-- Profile tagline -->
+                <button class="product-button1">Share</button>
+            </div>
+    </div>
+
+   
+    <!-- Product Grid -->
+    <div class="product-grid">
+        <div class="product-box">
+            <div class="product-header">
+                <div class="dropdown">
+                    <img src="../assets/setting_svgrepo.com.png" alt="Settings Icon" class="settings-icon" onclick="toggleDropdown(this)">
+                    <div class="dropdown1-content dropdown-content">
+                        <a href="#">Edit</a>
+                        <a href="#">Copy</a>
+                        <a href="#">Delete</a>
+                        <a href="#">Active</a>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="product-content">
+                <img src="../assets/product image.png" alt="Dentist" class="product-image">
+                <h3>Dentist</h3>
+                <p>$10</p>
+                <p>Dentistry, Smiles with Lasting Impact.</p>
+                <hr>
+                <button class="product-button">Manage Booking</button>
+                <button class="product-button">Share</button>
+            </div>
+        </div>
+        
+        <div class="product-box">
+            <div class="product-header">
+                <div class="dropdown">
+                    <img src="../assets/setting_svgrepo.com.png" alt="Settings Icon" class="settings-icon" onclick="toggleDropdown(this)">
+                    <div class="dropdown1-content dropdown-content">
+                        <a href="#">Edit</a>
+                        <a href="#">Copy</a>
+                        <a href="#">Delete</a>
+                        <a href="#">Active</a>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="product-content">
+                <img src="../assets/product image.png" alt="Hair Dresser">
+                <h3>Hair Dresser</h3>
+                <p>$19</p>
+                <p>More Than a Haircut, It’s an Experience.</p>
+                <hr>
+                <button class="product-button">Manage Booking</button>
+                <button class="product-button">Share</button>
+            </div>
+        </div>
+        
+     
+        
+        <div class="product-box">
+            <div class="product-header">
+                <div class="dropdown">
+                    <img src="../assets/setting_svgrepo.com.png" alt="Settings Icon" class="settings-icon" onclick="toggleDropdown(this)">
+                    <div class="dropdown1-content dropdown-content">
+                        <a href="#">Edit</a>
+                        <a href="#">Copy</a>
+                        <a href="#">Delete</a>
+                        <a href="#">Active</a>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="product-content">
+                <img src="../assets/product image.png" alt="1 to 1 coaching">
+                <h3>1 to 1 Coaching</h3>
+                <p>Free</p>
+                <p>Strategies for Success, Solutions for Growth.</p>
+                <hr>
+                <button class="product-button">Manage Booking</button>
+                <button class="product-button">Share</button>
+            </div>
+        </div>
+        <div class="product-box">
+            <div class="product-header">
+                <div class="dropdown">
+                    <img src="../assets/setting_svgrepo.com.png" alt="Settings Icon" class="settings-icon" onclick="toggleDropdown(this)">
+                    <div class="dropdown1-content dropdown-content">
+                        <a href="#">Edit</a>
+                        <a href="#">Copy</a>
+                        <a href="#">Delete</a>
+                        <a href="#">Active</a>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="product-content">
+                <img src="../assets/product image.png" alt="Vintage Red Glosses">
+                <h3>Vintage Red Glosses</h3>
+                <p>$20</p>
+                <p>Discover the Power of Words and Literature.</p>
+                <hr>
+                <button class="product-button">Manage Order</button>
+                <button class="product-button">Share</button>
+            </div>
+        </div>
+        <div class="product-box">
+            <div class="product-header">
+                <div class="dropdown">
+                    <img src="../assets/setting_svgrepo.com.png" alt="Settings Icon" class="settings-icon" onclick="toggleDropdown(this)">
+                    <div class="dropdown1-content dropdown-content">
+                        <a href="#">Edit</a>
+                        <a href="#">Copy</a>
+                        <a href="#">Delete</a>
+                        <a href="#">Active</a>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="product-content">
+                <img src="../assets/product image.png" alt="Customised Dress">
+                <h3>Customised Dress</h3>
+                <p>$120</p>
+                <p>Where Style Meets Elegance.</p>
+                <hr>
+                <button class="product-button">Manage Order</button>
+                <button class="product-button">Share</button>
+            </div>
+        </div>
+     
+
+        <div class="product-box">
+            <div class="product-header">
+                <div class="dropdown">
+                    <img src="../assets/setting_svgrepo.com.png" alt="Settings Icon" class="settings-icon" onclick="toggleDropdown(this)">
+                    <div class="dropdown1-content dropdown-content">
+                        <a href="#">Edit</a>
+                        <a href="#">Copy</a>
+                        <a href="#">Delete</a>
+                        <a href="#">Active</a>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="product-content">
+                <img src="../assets/product image.png" alt="10 Bags of coffee seeds">
+                <h3>10 Bags of Coffee Seeds</h3>
+                <p>$71</p>
+                <p>Activity</p>
+                <hr>
+                <button class="product-button">Manage Order</button>
+                <button class="product-button">Share</button>
+            </div>
+        </div>
+     
+      
+       
+    </div>
+    </main>
+    </div>
+
+    <footer class="custom-footer">
+        <div class="footer-text">
+            <span>English</span> <!-- Language selector -->
+            <span>@copyrights</span> <!-- Copyright information -->
+            <span>Terms and Conditions</span> <!-- Link to Terms and Conditions -->
+            <span>Privacy</span> <!-- Link to Privacy Policy -->
+            <span>Cookie Settings</span> <!-- Cookie settings link -->
+        </div>
+        <div class="social-links">
+            <img src="../assets/logos Group.png" alt="Social Icons"> <!-- Social media icons -->
+        </div>
+    </footer>
+
+    <script src="../utilis/drop_down.js"></script> 
+    <script src="../utilis/shop(business owner view).js"></script>
+
+</body>
+
+</html>

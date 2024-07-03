@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Billing</title>
+    <link rel="stylesheet" href="../styles/subscription_billing.css">
+</head>
+<body>
+    <header class="custom-header">
+        <div class="logo">
+            <img src="../assets/business boss1.png " alt="Logo">
+        </div>
+        <input type="checkbox" id="menu-toggle"> <!-- Hidden checkbox for toggling the nav -->
+        <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
+        <nav>
+            <ul>
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_service'">Services</button></li> <!-- Navigation button for Services -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_product'">Products</button></li> <!-- Navigation button for Products -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_shop'">View Shop</button></li> <!-- Navigation button for View Shop -->
+                <li class="dropdown">
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <div class="dropdown-content">
+                        <a href="#">Help</a> <!-- Dropdown link for Help -->
+                        <a href="#">Password</a> <!-- Dropdown link for Password -->
+                        <a href="/dashboard_subscription">Subscription</a> <!-- Dropdown link for Subscription -->
+                        <a href="/login">Log Out</a> <!-- Dropdown link for Log Out -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="dashboard-column">
+            <a href="/dashboard">
+                <h2 class="dashboard-heading">Dashboard</h2>
+            </a>
+            <div class="dashboard-links">
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
+            </div>
+        </div>
+
+        <main>
+            <h1>Subscription Billing</h1>
+
+            <div class="billing-section">
+                <div class="billing-details">
+                    <h3>1. Choose Billing Cycle</h3>
+                    <div class="container">
+                        <div class="Month">
+                            <label>
+                                <input type="radio" name="billing-cycle" value="monthly" class="radio-color">
+                                <div class="content">
+                                    <label>Monthly</label>
+                                    <label>$9.99 per month</label>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="Year">
+                            <label>
+                                <input type="radio" name="billing-cycle" value="yearly" class="radio-color">
+                                <div class="content">
+                                    Yearly
+                                    <label>$20 per month</label>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <h3>2. Add Payment Method</h3>
+                    <div id="onlinePayment" class="payment-content">
+                        <div class="credit">
+                            <div class="form-group1">
+                                <input class="radio-color" type="radio" name="invoice-notification" checked> 
+                                <img src="../assets/credit-card_svgrepo.com.png" alt=""> 
+                                Credit 
+                                <img src="../assets/Vector.png" alt=""> 
+                                Secure Method
+                                <br>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter card number  MM/YY  CVC">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="credit1">
+                            <div class="form-group1">
+                                <input class="radio-color" type="radio" name="invoice-notification" checked> 
+                                <img src="../assets/paypal_svgrepo.com.png" alt=""> 
+                                Paypal
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <br>
+                    <p><strong>Yearly Subscription: $240 USD</strong></p>
+                    <p>$20 x 12 months</p>
+                    <p><strong>Total Amount: $240 USD</strong></p>
+                    <p>You will be charged this amount again on 29/08/2024 unless you cancel your subscription before then.</p>
+                    <button class="purchase-button">Purchase</button>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+
+    <footer class="custom-footer">
+        <div class="footer-text">
+            <span>Powered by BB</span>
+            <span>English</span>
+            <span>@copyrights</span>
+            <span>Terms and Conditions</span>
+            <span>Privacy</span>
+            <span>Cookie Settings</span>
+        </div>
+        <div class="social-links">
+            <img src="../assets/logos Group.png" alt="Social Icons">
+        </div>
+    </footer>
+
+    <script src="../utilis/drop_down.js"></script>
+</body>
+</html>

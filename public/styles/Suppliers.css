@@ -1,0 +1,599 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensures padding and border are included in element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-y: auto;
+    /* Basic text color */
+}
+
+button.create-order-button {
+    all: unset;
+    /* Resets all inherited styles */
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: right;
+    color: #5077AC;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    /* Indicates it's a clickable element */
+}
+
+/* Custom header styles */
+.custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #4680A6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+    /* Ensures the header is above other content */
+}
+
+.custom-header .logo img {
+    height: 40px;
+    /* Logo height */
+}
+
+.custom-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    /* Space between nav items */
+}
+
+.custom-header nav ul li {
+    display: flex;
+}
+
+.custom-header nav ul li button {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px;
+    /* Adds horizontal padding to create space */
+}
+
+.user-image {
+    height: 40px;
+    /* User image height */
+    border-radius: 50%;
+    /* Round user image */
+}
+
+.nav-button img {
+    display: block;
+}
+
+/* Add margin to the user image button */
+.custom-header .user-image {
+    margin-left: 20px;
+    /* Adjusts space to the left of the user image */
+}
+/* Toggle Menu Button */
+.menu-button {
+    display: none;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+
+/* Dashboard column styles */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    /* Minimum width for dropdown */
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+    /* Show dropdown content */
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 80px;
+    /* Ensure content starts below the fixed header */
+    margin-left: 200px;
+    /* Adjust for the width of the fixed dashboard column */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.clients-management {
+    margin-bottom: 40px;
+}
+
+.management-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4680A6;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 50px;
+    /* Increased horizontal padding */
+    min-width: 120px;
+    /* Set a minimum width */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+    border-radius: 10px;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: #4680A6;
+    /* Background color on hover and active state */
+    color: #fff;
+}
+.project-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 0 40%; /* Allows three fields per line */
+    min-width: 200px;
+}
+
+.form-group label{
+   color: #4680A6;
+}
+
+
+.button-container {
+    flex: 0 0 35%; /* Width for the button container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; /* Align with the fourth input */
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    height: 46px;
+    padding: 13px 16.8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #4680A6;
+    outline: none;
+}
+
+.save-button,
+.cancel-button {
+    padding: 15px 50px;
+    /* Increased top and bottom padding */
+    margin-top: 30px;
+    /* Add some top margin */
+    margin-bottom: 150px;
+    /* Increase bottom margin for more space */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    /* Default color */
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+    border-radius: 50px;
+}
+
+.save-button {
+    background-color: #4680A6;
+    /* Set save button color */
+    color: #fff;
+}
+
+.cancel-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+.contact-button{
+    padding: 15px 50px;
+    /* Increased top and bottom padding */
+   
+    /* Increase bottom margin for more space */
+    border: 1px solid red;
+    background-color: #fff;
+    /* Default color */
+    color: red;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+    border-radius: 50px;
+}
+.contact-button:hover{
+    color: #fff;
+    /* Default color */
+    background-color: red;
+}
+.edit-button:hover,
+.delete:hover {
+    color: black;
+}
+
+.edit-button,
+.cancel {
+    background-color: transparent;
+    /* Remove background color */
+    border: none;
+    /* Remove border */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margin */
+    cursor: pointer;
+    /* Maintain cursor for hover effect */
+    color: #4680A6;
+    /* Inherit table cell text color */
+}
+
+.edit-button {
+    margin-right: 15px;
+    /* Add space between edit and delete buttons */
+    margin-left: 15px;
+}
+
+.delete {
+    margin-left: 15px;
+}
+
+.clients-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.clients-list th,
+.clients-list td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.clients-list th {
+    background-color: #f4f4f4;
+}
+
+.custom-footer {
+    margin-top: 40px;
+    width: 100%;
+    background: #F2FAFF;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-text span {
+    color: #4680A6;
+    font-size: 14px;
+}
+
+.social-links img {
+    height: 24px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    main {
+        margin-left: 200px;
+        padding: 10px;
+    }
+    .task-header,
+    .task {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background-color: #4680A6;
+        display: flex;
+        align-items: center;  /* This centers elements vertically */
+        padding: 0 16px;
+        z-index: 1000;
+      }
+    .custom-header nav {
+        display: none; /* Hide the menu by default */
+      }
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .custom-header nav ul li {
+        width: 100%;
+    }
+    .dropdown-content {
+        display: block;
+        position: absolute;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        min-width: 160px;
+    }
+    .dropdown.show  {
+      
+        width: 80%;
+    }
+   .menu-button {
+  display: block;  /* Ensure the button is always displayed */
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;  /* Move the button to the left side */
+
+}
+
+
+    #menu-toggle:checked + .menu-button + nav {
+        display: block;
+        position: absolute;
+        background: #4680A6;
+        top: 80px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul {
+        flex-direction: column;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul li {
+        margin: 1rem 0;
+    }
+
+
+    .nav-button img {
+        display: block;
+    }
+    .dashboard-column {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .management-title {
+        text-align: center;
+    }
+
+    .form-group label {
+        text-align: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .clients-list {
+        font-size: 14px;
+    }
+    .dropdown-content{
+        width: 280px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-image {
+        height: 30px;
+    }
+
+    .dashboard-column {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .dropdown-content {
+        display: block;
+        position: absolute;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        min-width: 160px;
+    }
+    .dropdown.show  {
+      
+        width: 80%;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .management-title {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .form-group label {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .clients-list {
+        font-size: 12px;
+    }
+
+    .clients-list th,
+    .clients-list td {
+        padding: 5px;
+    }
+
+    .footer-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text span {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 481px) {
+    .cancel-button{
+         margin-top: -150px;
+         margin-bottom: 50px;
+         width: 24%;
+         padding-left: 30px;
+    }
+    .save-button{
+        width: 24%;
+        padding-left: 30px;
+    }
+    .dropdown-content{
+        width: 280px;
+    }
+    .menu-button{
+       margin-bottom: 50px;
+       margin-top: -100px;
+    }
+    .logo{
+        margin-bottom: 50px;
+       margin-top: 10px;
+    }
+}
+

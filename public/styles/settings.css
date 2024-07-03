@@ -1,0 +1,570 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Custom header styles */
+.custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #4680A6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+}
+
+.custom-header .logo img {
+    height: 40px;
+}
+
+.custom-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.custom-header nav ul li {
+    display: flex;
+}
+
+.custom-header nav ul li button {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.user-image {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-button img {
+    display: block;
+}
+
+.custom-header .user-image {
+    margin-left: 20px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+.dashboard-column {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    height: calc(100% - 80px);
+    width: 200px;
+    background-color: #fff;
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border-right: 1px solid #DADADA;
+    overflow-y: auto;
+}
+
+.dashboard-heading {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #DADADA;
+}
+
+.dashboard-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard-button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-button.active,
+.dashboard-button:hover {
+    background-color: #F2FAFF;
+}
+
+main {
+    flex: 1;
+    padding: 20px 16px;
+    margin-left: 200px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+/* styles/settings.css */
+
+/* styles/settings.css */
+
+.logo-upload {
+    display: inline-block; /* Display horizontally */
+    width: 200px; /* Adjust width as needed */
+    text-align: center; /* Center align content */
+    margin-right: 20px; /* Add space between logo-upload divs */
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    padding: 10px; /* Add padding */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.logo-upload img {
+    max-width: 100px; /* Adjust image size */
+    margin-bottom: 10px;
+}
+
+.logo-upload label {
+    display: block; /* Display labels as block */
+    margin-bottom: 5px; /* Add space between label and image */
+    font-weight: bold; /* Make label text bold */
+}
+
+.upload-btn {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    background-color: #4680A6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+    color: #4680A6;
+    background-color: white;
+    border: 1px solid #4680A6;
+}
+/* styles/settings.css */
+/* styles/settings.css */
+
+.text-fields {
+    display: flex; /* Display fields horizontally */
+    gap: 10px; /* Reduce space between fields */
+}
+
+.field {
+    flex: 1; /* Each field takes equal space */
+    display: flex; /* Display flex for aligning label and input/select */
+    flex-direction: column; /* Stack label on top of input/select */
+    margin-top: 30px;
+}
+
+.field label {
+    margin-bottom: 5px; /* Add space between label and input/select */
+    font-weight: bold; /* Make label text bold */
+}
+
+.field input[type="text"],
+.field select {
+    width: calc(100% - 20px); /* Adjust width to be less than full */
+    padding: 8px; /* Padding for input/select */
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.3s ease; /* Transition for better user experience */
+}
+
+.field input[type="text"]:focus,
+.field select:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #007bff; /* Highlight border color on focus */
+}
+
+.landing-page-section {
+    margin-bottom: 40px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+.dropdown-landing {
+    position: relative;
+    display: inline-block;
+}
+/* styles/settings.css */
+
+.switches {
+    display: flex; /* Display switches horizontally */
+    gap: 20px; /* Space between switches */
+    margin-top: 30px;
+}
+
+.switch {
+    display: flex; /* Align label and input horizontally */
+    align-items: center; /* Center align items vertically */
+}
+
+.switch input[type="checkbox"] {
+    margin-right: 5px; /* Space between checkbox and label */
+}
+
+.switch label {
+    font-weight: bold; /* Make label text bold */
+}
+
+.switch input[type="checkbox"]:checked {
+    background-color: #007bff; /* Blue background for checked state */
+}
+/* styles/settings.css */
+
+.customizer {
+    display: flex; /* Align elements horizontally */
+    flex-wrap: wrap; /* Allow elements to wrap if necessary */
+    gap: 20px; /* Space between elements */
+    margin-top: 30px;
+}
+
+.color-settings {
+    flex: 1; /* Take full width available */
+}
+
+.colors {
+    display: flex; /* Align color options horizontally */
+    gap: 10px; /* Space between color options */
+}
+
+.color {
+    display: inline-block;
+    width: 30px; /* Adjust color swatch size */
+    height: 30px;
+    border-radius: 50%; /* Rounded shape */
+    border: 2px solid transparent; /* Transparent border */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.color:hover {
+    border-color: #333; /* Dark border color on hover */
+}
+
+.layout-settings {
+    flex: 1; /* Take full width available */
+  
+}
+
+.layout-settings input[type="checkbox"] {
+    margin-right: 5px; /* Space between checkbox and text */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.layout-settings label {
+    font-weight: bold; /* Make label text bold */
+    cursor: pointer; /* Change cursor on hover */
+    
+}
+
+.landing-button {
+    background-color: #4680A6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.landing-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 200px;
+    /* Increase width */
+}
+
+.landing-dropdown-content .landing-dropdown-item {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: white;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.landing-dropdown-content .landing-dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-landing:hover .landing-dropdown-content {
+    display: block;
+}
+
+.landing-page-form {
+    margin-top: 20px;
+    display: none;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4680A6;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+.save-button{  margin-left: 1000px;
+  }
+.save-button,
+.cancel-button {
+    padding: 10px 20px;
+    border: 1px solid #4680A6;
+   color: #fff;
+   background-color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+  
+}
+
+.save-button:hover,
+.cancel-button:hover {
+    color: #4680A6;
+    background-color: #fff;
+    border: 1px solid #4680A6;
+}
+
+.custom-footer {
+    width: 100%;
+    background: #F2FAFF;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-text span {
+    color: #4680A6;
+    font-size: 14px;
+}
+
+.social-links img {
+    height: 24px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .custom-header,
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-column {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        position: relative;
+    }
+
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-group label {
+        text-align: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-image {
+        height: 30px;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-group label {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text span {
+        margin-bottom: 10px;
+    }
+}

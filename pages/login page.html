@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../styles/login page.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/business boss1.png" alt="Logo">
+            </div>
+
+            <!-- additional code -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-button">&#9776;</label>
+            <!-- ----------- -->
+            <nav>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#" class="login-btn">Login</a></li>
+                    <li><a href="#" class="signup-btn">Get Free Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container login-container">
+            <div class="welcome-box">
+                <h2>Welcome to BPro!</h2>
+                <p>Login or register with your email</p>
+                <div class="image-container">
+                    <img src="../assets/welcome.png" alt="Welcome Image">
+                </div>
+                <p class="signup-link">I don't have an account! <a href="/signup" class="underline">Sign Up</a></p>
+            </div>
+
+            <div class="login-box">
+                <div class="left-content">
+                    <a href="#" class="back-link">
+                        <img src="../assets/arrow-circle-left.png" alt="Back arrow"> Back
+                    </a>
+                    <h2 class="create-account-heading">Create Your Account</h2>
+                </div>
+                <button class="google-login">
+                    <img src="../assets/google.png" alt="Google icon" class="google-icon">
+                    <span class="google-text">Sign in with Google Account</span>
+                </button>
+
+                <p class="choice">Or sign up with email and password</p>
+                <form action="/login" method="post">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Type here">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="********">
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember"> Remember me
+                    </label>
+                        <button type="submit" class="Login-btn">Sign in</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">English</a>
+                <a href="#">©copyights</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookie Settings</a>
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="../assets/logos Group.png" alt="Social Icons"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

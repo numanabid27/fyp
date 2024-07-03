@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account</title>
+    <link rel="stylesheet" href="../styles/signup page .css"> <!-- Link to external CSS -->
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/business boss1.png" alt="Logo"> <!-- Business logo -->
+            </div>
+            <!-- additional code -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-button">&#9776;</label>
+            <nav>
+                <ul>
+                    <li><button class="custom-button1 nav-button">About Us</button></li>
+                    <!-- Navigation button for About Us -->
+                    <li><button class="custom-button1 nav-button">Features</button></li>
+                    <!-- Navigation button for Features -->
+                    <li><button class="custom-button1 nav-button">Blog</button></li> <!-- Navigation button for Blog -->
+                    <li><button class="custom-button1 nav-button">Pricing</button></li>
+                    <!-- Navigation button for Pricing -->
+                    <li><button class="nav-button login-btn">Login</button></li> <!-- Login button -->
+                    <li><button class="nav-button signup-btn">Get Free Account</button></li> <!-- Signup button -->
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container register-container">
+            <div class="welcome-box">
+                <h2>Welcome to BPro!</h2>
+                <p>Login or register with your email</p>
+                <div class="image-container">
+                    <img src="../assets/signup image.png" alt="Welcome Image"> <!-- Welcome image -->
+                </div>
+                <p class="login-link">I have an account! <button class="custom-button">Sign In</button></p>
+                <!-- Link to sign in -->
+            </div>
+            <div class="register-box">
+                <div class="left-content">
+                    <a href="#" class="back-link">
+                        <img src="../assets/arrow-circle-left.png" alt="Back arrow"> Back <!-- Back link with arrow -->
+                    </a>
+                    <h2 class="create-account-heading">Create Your Account</h2> <!-- Heading for create account -->
+                </div>
+                <button class="google-login">
+                    <img src="../assets/google.png" alt="Google icon">
+                    <span>Sign in with Google Account</span> <!-- Google sign-in button -->
+                </button>
+                <p class="choice">Or sign up with email and password</p> <!-- Option to sign up with email -->
+                <form action="/signup" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="profile-name">Profile Name</label>
+                            <input type="text" id="profile-name" name="profile-name" placeholder="Type here">
+                            <!-- Input for profile name -->
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Type here">
+                            <!-- Input for email -->
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="********">
+                            <!-- Input for password -->
+                        </div>
+                        <div class="form-group">
+                            <label for="retype-password">Retype Password</label>
+                            <input type="password" id="retype-password" name="retype-password" placeholder="********">
+                            <!-- Input to retype password -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="custom-link">Create a custom link for your business! You can change it whenever you
+                            want.</label>
+                        <input type="text" id="custom-link" name="custom-link" placeholder="businessPro"
+                            class="wide-input"> <!-- Input for custom business link -->
+                    </div>
+
+                    <label class="terms">
+                        <input type="checkbox" name="terms"> <!-- Checkbox for terms agreement -->
+                        By creating an account, you agree with our Terms and Conditions, Privacy Policy and Cookie
+                        Settings.
+                    </label>
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember"> Remember me <!-- Checkbox for remember me -->
+                    </label>
+                    <button type="submit" class="Up-btn">Sign Up</button> <!-- Sign up button -->
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">English</a> <!-- Language selector -->
+                <a href="#">©copyights</a> <!-- Copyright information -->
+                <a href="#">Terms and Conditions</a> <!-- Link to Terms and Conditions -->
+                <a href="#">Privacy</a> <!-- Link to Privacy Policy -->
+                <a href="#">Cookie Settings</a> <!-- Cookie settings link -->
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="../assets/logos Group.png" alt="Social Icons"></a> <!-- Social media icons -->
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

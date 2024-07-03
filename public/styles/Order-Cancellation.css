@@ -1,0 +1,586 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f4f7f9;
+}
+
+/* Custom header styles */
+.custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #4680A6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+    /* Ensure the header is above other content */
+}
+
+.custom-header .logo img {
+    height: 40px;
+}
+
+.custom-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.custom-header nav ul li {
+    display: flex;
+}
+
+.custom-header nav ul li button {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px;
+    /* Add horizontal padding to create space */
+}
+
+.user-image {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-button img {
+    display: block;
+}
+
+/* Add margin to the user image button */
+.custom-header .user-image {
+    margin-left: 20px;
+    /* Adjust this value to add more or less space */
+}
+
+/* Dashboard column styles */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+.dashboard-column {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    height: calc(100% - 80px);
+    width: 200px;
+    background-color: #fff;
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border-right: 1px solid #DADADA;
+    overflow-y: auto;
+}
+
+.dashboard-heading {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #DADADA;
+}
+
+.dashboard-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-button.active,
+.dashboard-button:hover {
+    background-color: #F2FAFF;
+}
+
+main {
+    width: 100%;
+    padding: 20px;
+    margin-top: 60px;
+    /* Ensure content starts below the fixed header */
+
+    /* Include padding and border in element's total width and height */
+}
+
+.profile-section {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-background {
+    width: 100vw;
+    /* Use 100vw to make it full width of the viewport */
+    height: 200px;
+    /* Adjust height as needed */
+    object-fit: cover;
+    /* Ensure the image covers the entire container */
+    margin: 0;
+    /* Remove any default margin */
+    padding: 0;
+    /* Remove any default padding */
+}
+
+.profile-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-info h2 {
+    margin-bottom: 5px;
+}
+
+.product-grid {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+hr {
+
+    border: none;
+    /* Remove the default border */
+    border-top: 2px solid lightgrey;
+    /* Set a light color */
+    transition: border-color 0.3s;
+    /* Smooth transition for the color change */
+}
+
+hr:hover {
+    border-top: 2px solid #4680A6;
+    /* Change the color to blue on hover */
+}
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-box {
+    width: calc(33.333% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-box img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-box h3 {
+    margin-bottom: 5px;
+}
+
+.product-box p {
+    margin-bottom: 10px;
+}
+
+.product-button {
+    margin-top: 20px;
+    padding: 10px 50px;
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+}
+
+.product-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+/* Custom footer styles */
+.custom-footer {
+    width: 100%;
+    background: #F2FAFF;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-text span {
+    color: #4680A6;
+    font-size: 14px;
+}
+
+.social-links img {
+    height: 24px;
+}
+.product-inventory-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.product-inventory-table th,
+.product-inventory-table td {
+    padding: 10px;
+  
+    text-align: left;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+  
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+.popup-content h3,.popup-content a{
+    color: #4680A6;
+}
+.popup-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.order-summary,
+.cancel-details {
+    flex: 1;
+    min-width: 300px;
+    padding: 15px 25px;
+    border: 1px solid #4680A6;
+    text-align: left;
+    box-shadow: 0px 0px 10px 4px #4680A633;
+}
+
+.order-summary h4,
+.cancel-details h4 {
+    color: #4680A6;
+    margin-bottom: 15px;
+}
+
+.order-summary p,
+.cancel-details .form-group {
+    margin-bottom: 10px;
+}
+
+.cancel-details textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.continue-button,
+.back-button,
+.confirm-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.continue-button:hover,
+.back-button:hover,
+.confirm-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+
+.MyOrder{
+    border: 1px solid white;
+    background-color: white;
+   
+    padding: 15px 20px;
+    width: 80%;
+    margin-left: 170px;
+}
+.MyOrder h2{
+    color: #4680A6;
+    margin-left: 200px;
+
+}
+.save-button,
+.cancel-button {
+    padding: 10px 20px;
+    border: 1px solid #4680A6;
+    border-radius: 50px;
+    background-color: #fff;
+    margin-left: 20px;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+}
+
+.save-button {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+.cancel-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        text-align: left;
+        padding: 20px 16px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 16px;
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+
+    .product-box {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        position: relative;
+        text-align: left;
+        padding: 20px 16px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 16px;
+    }
+
+    .section-title {
+        text-align: left;
+    }
+
+    .form-group label {
+        text-align: left;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cancel-button,
+    .save-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-box {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-image {
+        height: 30px;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 10px;
+    }
+
+    .section-title {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .form-group label {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cancel-button,
+    .save-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-box {
+        width: calc(100% - 20px);
+    }
+
+    .footer-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text span {
+        margin-bottom: 10px;
+    }
+}

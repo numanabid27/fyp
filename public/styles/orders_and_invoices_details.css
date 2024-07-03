@@ -1,0 +1,654 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Custom header styles */
+.custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #4680A6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+    /* Ensure the header is above other content */
+}
+
+.custom-header .logo img {
+    height: 40px;
+}
+
+.custom-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.custom-header nav ul li {
+    display: flex;
+}
+
+.custom-header nav ul li button {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px;
+    /* Add horizontal padding to create space */
+}
+
+.user-image {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-button img {
+    display: block;
+}
+
+/* Add margin to the user image button */
+.custom-header .user-image {
+    margin-left: 20px;
+    /* Adjust this value to add more or less space */
+}
+/* Toggle Menu Button */
+.menu-button {
+    display: none;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+
+/* Dashboard column styles */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+.dashboard-column {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    height: calc(100% - 80px);
+    width: 200px;
+    background-color: #fff;
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border-right: 1px solid #DADADA;
+    overflow-y: auto;
+}
+
+.dashboard-heading {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #DADADA;
+}
+
+.dashboard-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-button.active,
+.dashboard-button:hover {
+    background-color: #F2FAFF;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 80px;
+    /* Ensure content starts below the fixed header */
+    margin-left: 200px;
+    /* Adjust for the width of the fixed dashboard column */
+    overflow-y: auto;
+    /* Enable vertical scrolling for content */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.button-container {
+    text-align: center;
+}
+
+.orders-invoices {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4680A6;
+}
+
+
+.tab-buttons {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 50px;
+    /* Increased horizontal padding */
+    min-width: 120px;
+    /* Set a minimum width */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+    border-radius: 10px;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: #4680A6;
+    /* Background color on hover and active state */
+    color: #fff;
+}
+
+.invoice-info {
+    display: flex;
+    flex-direction: column;
+    /* Make the main container a column layout */
+    align-items: flex-start;
+    /* Align children to the start of the container */
+}
+
+.top-row {
+    display: flex;
+    align-items: center;
+    /* Align items vertically centered */
+    margin-bottom: 8px;
+    /* Add some space between rows */
+}
+
+.top-row img {
+    margin-right: 8px;
+    /* Add some space between the image and the text */
+}
+
+.down-row {
+    margin-left: 50px;
+    font-size: small;
+    color: rgb(117, 110, 110);
+}
+
+.Invoices-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Roboto;
+    margin-left: 50px;
+}
+
+.orders-invoices {
+    margin-left: 50px;
+}
+
+.invoice-detail {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.invoice-actions a {
+    color: #4680A6;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.Payment_text {
+    color: #4680A6;
+    margin-right: 100px;
+    font-size: large;
+}
+
+.download-button {
+    padding: 20px 50px;
+    border: 1px solid #4680A6;
+    background-color: #4680A6;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-top-left-radius: 15px;
+    /* Apply radius to the top-left corner */
+    border-bottom-left-radius: 15px;
+    /* Apply radius to the bottom-left corner */
+    border-top-right-radius: 0;
+    /* Ensure the top-right corner is straight */
+    border-bottom-right-radius: 0;
+    /* Ensure the bottom-right corner is straight */
+    margin-top: 50px;
+    margin-left: 120px;
+}
+
+
+.download-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+.invoice-status-paid {
+    font-size: 40px;
+    color: black;
+    font-weight: 400px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 800px;
+    display: inline;
+}
+
+.invoice {
+    font-size: small;
+    color: rgb(61, 60, 60);
+    font-weight: 200px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 885px;
+    display: inline;
+    font-family: Roboto;
+}
+.invoice-address,
+.invoice-dates,
+.invoice-bill-to,
+.invoice-description,
+.invoice-totals,
+.invoice-notes {
+    margin-bottom: 20px;
+}
+
+.invoice-address div,
+.invoice-dates div,
+.invoice-totals div {
+    margin-bottom: 10px;
+}
+
+.invoice-bill-to h4,
+.invoice-description h4,
+.invoice-notes h4 {
+    margin-bottom: 10px;
+}
+
+/* Custom footer styles */
+.custom-footer {
+    width: 100%;
+    background: #F2FAFF;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-text span {
+    color: #4680A6;
+    font-size: 14px;
+}
+
+.social-links img {
+    height: 24px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    main {
+        margin-left: 200px;
+        padding: 10px;
+    }
+
+    .task-header,
+    .task {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        text-align: left;
+        padding: 20px 16px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 16px;
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background-color: #4680A6;
+        display: flex;
+        align-items: center;  /* This centers elements vertically */
+        padding: 0 16px;
+        z-index: 1000;
+      }
+    .custom-header nav {
+        display: none; /* Hide the menu by default */
+      }
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .custom-header nav ul li {
+        width: 100%;
+    }
+    .dropdown-content {
+        display: block;
+        position: absolute;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        min-width: 160px;
+    }
+    .dropdown.show  {
+      
+        width: 80%;
+    }
+   .menu-button {
+  display: block;  /* Ensure the button is always displayed */
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;  /* Move the button to the left side */
+
+}
+
+
+    #menu-toggle:checked + .menu-button + nav {
+        display: block;
+        position: absolute;
+        background: #4680A6;
+        top: 80px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul {
+        flex-direction: column;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul li {
+        margin: 1rem 0;
+    }
+
+
+    .nav-button img {
+        display: block;
+    }
+    
+
+    .dashboard-column {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        position: relative;
+        text-align: left;
+        padding: 20px 16px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 16px;
+    }
+
+    .section-title {
+        text-align: left;
+    }
+
+    .form-group label {
+        text-align: left;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .orders-list {
+        font-size: 14px;
+    }
+    .dropdown-content{
+        width: 280px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-image {
+        height: 30px;
+    }
+
+    .dashboard-column {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .dropdown-content {
+        display: block;
+        position: absolute;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        min-width: 160px;
+    }
+    .dropdown.show  {
+      
+        width: 80%;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 10px;
+    }
+
+    .section-title {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .form-group label {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .orders-list {
+        font-size: 12px;
+    }
+
+    .orders-list th,
+    .orders-list td {
+        padding: 5px;
+    }
+
+    .footer-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text span {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 481px) {
+    .Payment_text{
+        width: 1000px;
+        margin-left: -90px;
+        margin-top: -10px;
+       
+    }
+    .download-button{
+        margin-left: 200px;
+    }
+    .orders-invoices{
+        width: 500px;
+    }
+   
+    .dropdown-content{
+        width: 280px;
+    }
+    .menu-button{
+       margin-bottom: 50px;
+       margin-top: -100px;
+    }
+    .logo{
+        margin-bottom: 50px;
+       margin-top: 10px;
+    }
+
+}

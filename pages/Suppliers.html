@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client's Management</title>
+    <link rel="stylesheet" href="../styles/Suppliers.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <!-- Fixed Header Section -->
+    <header class="custom-header">
+        <div class="logo">
+            <img src="../assets/business boss1.png" alt="Logo"> <!-- Logo image -->
+        </div>
+        <input type="checkbox" id="menu-toggle"> <!-- Hidden checkbox for toggling the nav -->
+        <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
+        <nav>
+            <ul>
+                <!-- Navigation Buttons -->
+                <li><button class="nav-button">Appointments</button></li>
+                <li><button class="nav-button">Products</button></li>
+                <li><button class="nav-button">View Shop</button></li>
+                <!-- User Dropdown Menu -->
+                <li class="dropdown">
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <div class="dropdown-content">
+                        <a href="#">Help</a>
+                        <a href="#">Password</a>
+                        <a href="/dashboard_subscription">Subscription</a> <!-- Dropdown link for Subscription -->
+                        <a href="/login">Log Out</a> <!-- Dropdown link for Log Out -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="clients-management">
+
+            <div class="tab-buttons">
+                <!-- Tab Buttons -->
+                <button class="tab-button" onclick="window.location.href='/dashboard_product'">Products</button>
+                <button class="tab-button active">Suppliers</button>
+            </div>
+            <button class="create-order-button">+ Add Supplier</button> <!-- Create Client Type Button -->
+
+            <div class="project-form">
+                <!-- Form for Client Type -->
+                <div class="form-group">
+                    <label for="client-number">Supplier’s Business  Name *</label>
+                    <input type="tel" id="client-number" name="client-number" placeholder="Enter">
+                </div>
+                <div class="form-group">
+                    <label for="client-type">Supplier’s Contact Name *</label>
+                    <select id="client-type" name="client-type">
+                        <option value="choose">Enter</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="client-type">Supplier’s Industry</label>
+                    <select id="client-type" name="client-type">
+                        <option value="choose">Enter</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="client-type">Supplied Products</label>
+                    <select id="client-type" name="client-type">
+                        <option value="choose">Enter</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="client-number">Supplier’s Email *</label>
+                    <input type="tel" id="client-number" name="client-number" placeholder="Supplier’s Email ">
+                </div>
+
+                <div class="form-group">
+                    <label for="client-number">Telephone number</label>
+                    <input type="tel" id="client-number" name="client-number" placeholder="Enter">
+                </div>
+                <div class="form-group">
+                    <label for="client-number">Supplier’s Location *</label>
+                    <input type="tel" id="client-number" name="client-number" placeholder="Supplier’s Location ">
+                </div>
+                <div class="form-group">
+                    <label for="client-number">Address</label>
+                    <input type="tel" id="client-number" name="client-number" placeholder="Enter">
+                </div>
+            </div>
+            <div class="form-actions">
+                <!-- Form Action Buttons -->
+                <button class="save-button">Save</button>
+                <button class="cancel-button">Cancel</button>
+            </div>
+            <button class="create-order-button">+ Clients Type</button> <!-- Create Client Type Button -->
+
+            <!-- Clients List Table -->
+            <table class="clients-list">
+                
+                <tbody>
+                    <!-- Client Type Rows -->
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>Email</td>
+                        <td>+109875432</td>
+                        <td>Wales</td>
+                        <td>Dresses</td>
+                        <td>
+                            <button class="contact-button">Contact</button>
+                            <button class="edit-button">Edit</button>
+                            <button class="cancel">Cancel</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>John Doe</td>
+                        <td>Email</td>
+                        <td>+109875432</td>
+                        <td>Wales</td>
+                        <td>Dresses</td>
+                        <td>
+                            <button class="contact-button">Contact</button>
+                            <button class="edit-button">Edit</button>
+                            <button class="cancel">Cancel</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>John Doe</td>
+                        <td>Email</td>
+                        <td>+109875432</td>
+                        <td>Wales</td>
+                        <td>Dresses</td>
+                        <td>
+                            <button class="contact-button">Contact</button>
+                            <button class="edit-button">Edit</button>
+                            <button class="cancel">Cancel</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>John Doe</td>
+                        <td>Email</td>
+                        <td>+109875432</td>
+                        <td>Wales</td>
+                        <td>Dresses</td>
+                        <td>
+                            <button class="contact-button">Contact</button>
+                            <button class="edit-button">Edit</button>
+                            <button class="cancel">Cancel</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="custom-footer">
+        <div class="footer-text">
+            <!-- Footer Links -->
+            <span>English</span>
+            <span>@copyrights</span>
+            <span>Terms and Conditions</span>
+            <span>Privacy</span>
+            <span>Cookie Settings</span>
+        </div>
+        <div class="social-links">
+            <img src="../assets/logos Group.png" alt="Social Icons"> <!-- Social Media Icons -->
+        </div>
+    </footer>
+    
+    <!-- External JavaScript File -->
+    <script src="../utilis/drop_down.js"></script>
+</body>
+</html>

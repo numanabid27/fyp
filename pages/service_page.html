@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="../styles/service_page.css">
+</head>
+
+<body>
+    <header class="custom-header">
+        <div class="logo">
+            <img src="../assets/business boss1.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_service'">Services</button></li> <!-- Navigation button for Services -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_product'">Products</button></li> <!-- Navigation button for Products -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_shop'">View Shop</button></li> <!-- Navigation button for View Shop -->
+                <li class="dropdown">
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <div class="dropdown-content">
+                        <a href="#">Help</a> <!-- Dropdown link for Help -->
+                        <a href="#">Password</a> <!-- Dropdown link for Password -->
+                        <a href="/dashboard_subscription">Subscription</a> <!-- Dropdown link for Subscription -->
+                        <a href="/login">Log Out</a> <!-- Dropdown link for Log Out -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="dashboard-column">
+            <a href="/dashboard">
+                <h2 class="dashboard-heading">Dashboard</h2>
+            </a>
+            <div class="dashboard-links">
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
+            </div>
+        </div>
+
+        <main>
+            <div class="add-product-section">
+
+                <div class="tab-buttons">
+                    <button class="tab-button active">Services</button>
+                    <button class="tab-button">Availability</button>
+                </div>
+                <button class="create-order-button">+ Add Service</button> <!-- Button to add new project -->
+
+
+                <form class="add-product-form">
+                    <div class="form-row">
+                        <div class="center-image">
+                            <button class="insert-image-button">Upload Image</button>
+                            <img src="../assets/Product Page.png" alt="Product Image">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="product-name">Name Service</label>
+                            <input type="text" id="product-name" name="product-name" placeholder="Enter service name">
+                        </div>
+                        <hr class="custom-hr">
+
+                        <div class="form-group half-width">
+                            <label for="product-feature">Description</label>
+                            <input type="text" id="product-feature" name="product-feature"
+                                placeholder="Enter Description">
+                        </div>
+
+
+                        <div class="form-row reduced-width">
+                            <div class="form-group">
+                                <label for="integration">Service price</label>
+                                <input type="text" id="integration" name="integration">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity">Currency</label>
+                                <input type="number" id="quantity" name="quantity">
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity">Discount</label>
+                                <input type="number" id="quantity" name="quantity">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <label for="quantity">Add packages</label>
+                            <input type="text" id="quantity" name="quantity"
+                                placeholder="Add additional packages to this service  ">
+                        </div>
+
+
+                    </div>
+
+
+                    <label for="" style="color:#4680A6;">Payment Method</label><br>
+                    <input class="radio-color" type="radio" name="invoice-notification" class="checkbox" checked> In
+                    Person
+                    <input class="radio-color" type="radio" name="invoice-notification" class="checkbox"> Online Payment
+
+                    <input class="radio-color" type="radio" name="invoice-notification" class="checkbox"> Allow client
+                    to choose
+                    <br>
+                    <br><br>
+                    <div class="form-group half-width">
+                        <label for="product-feature"> Meeting Method</label>
+                        <p>In person meeting</p>
+                        <br>
+
+                        <input type="text" id="product-feature" name="product-feature" placeholder="Add a Location  ">
+
+                    </div>
+                    <br>
+                    <p>OR</p>
+                    <br>
+                    <div class="form-group half-width">
+                        <input type="text" id="subscription" name="subscription" placeholder=" Add Client Location  ">
+                    </div>
+                    <br><br>
+                    <p>Online Meeting</p>
+                    <div class="form-container">
+                        <div class="form-group">
+                            <div class="image-label-wrapper">
+                                <div class="image-label-container">
+                                    <img src="../assets/zoom_svgrepo.com.png" alt="Zoom" style="display: inline;">
+                                    <label for="zoom-meeting"> Zoom Meeting</label>
+                                </div>
+                                <div class="image-label-container">
+                                    <img src="../assets/google-meet_svgrepo.com.png" alt="Google Meet"
+                                        style="display: inline;">
+                                    <label for="google-meet"> Google Meet</label>
+                                </div>
+                            </div>
+                            <input type="text" id="zoom-meeting" name="zoom-meeting" placeholder="Enter Meeting link">
+                        </div>
+                    </div>
+
+
+
+                </form>
+                <br>
+                <br>
+                <br>
+                <p style="color: #4680A6; ">Select a Date & Time</p>
+                <br>
+                <br>
+
+                <div class="date-time-picker">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button class="prev-month">&lt;</button>
+                            <span class="month-year"></span>
+                            <button class="next-month">&gt;</button>
+                        </div>
+                        <div class="calendar-grid">
+                            <!-- Calendar will be rendered here -->
+                        </div>
+                    </div>
+                    <div class="time-slots">
+                        <h3>Available Slots</h3>
+                        <ul class="time-slots-list">
+                            <!-- Time slots will be rendered here -->
+                        </ul>
+                    </div>
+                </div>
+                <hr class="custom-hr">
+                <br>
+                <br>
+                <br>
+                <div class="anotherform">
+                    <div class="form-group">
+                        <label for="service-description">Duration</label>
+                        <select name="repeat" id="repeat">
+                            <option value="">Select</option>
+                            <option value="daily">Mint</option>
+                            <option value="weekly">Hour</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="service-description">Repeat</label>
+                        <select name="repeat" id="repeat">
+                            <option value="">Select</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="radio-container">
+                        <input class="radio-color" type="radio" name="invoice-notification" id="individual">
+                        <label for="individual">Individual (1 to 1)</label>
+                        <input class="radio-color" type="radio" name="invoice-notification" id="group">
+                        <label for="group">Group Session or Event</label>
+                    </div>
+                    <div class="textarea-container">
+                        <textarea name="" id="" class="reduced-textarea"></textarea>
+                        <br>
+                        <label for="">How many people can register the same time?</label>
+                    </div>
+                    <div class="form-group">
+                        <br>
+                        <br>
+                        <hr class="custom-hr">
+                        <br><br>
+                        <label for="service-description">Message or Question</label>
+                        <input type="text" placeholder="Enter Your question here">
+                    </div>
+
+                    
+                </div>
+                <hr class="custom-hr">
+                <div class="form-group">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <label for="quantity">Status?</label>
+                   <label for="" style="color: black;">Is it Active?</label>
+                  </div>
+                  <hr class="custom-hr">
+                  <div class="form-actions">
+                    <button class="save-button">Save</button> <!-- Button to create the order -->
+                    <button class="cancel-button">Cancel</button> <!-- Button to cancel creating the order -->
+                </div>
+               
+                <h2 class="section-title">Services List</h2>
+                <table class="product-inventory-table">
+                   
+                    <tbody>
+                        <tr>
+                            <td>Coffee Grains</td>
+                            <td>$500</td>
+                            <td>$800</td>
+                            <td>100 Units</td>
+                            <td>New</td>
+                       <td>Active</td>
+                            <td> <button class="contact-button">Contact</button></td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="delete-button">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Avocado</td>
+                            <td>$250</td>
+                            <td>$400</td>
+                            <td>50 Units</td>
+                            <td>Old</td>
+                           
+                            <td>Inactive</td>
+                            <td> <button class="contact-button">Contact</button></td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="delete-button">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer class="custom-footer">
+        <div class="footer-text">
+            <span>English</span>
+            <span>@copyrights</span>
+            <span>Terms and Conditions</span>
+            <span>Privacy</span>
+            <span>Cookie Settings</span>
+        </div>
+        <div class="social-links">
+            <img src="../assets/logos Group.png" alt="Social Icons">
+        </div>
+    </footer>
+    <script src="../utilis/drop_down.js"></script>
+    <script src="../utilis/service_page.js"></script>
+</body>
+
+</html>

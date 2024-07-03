@@ -1,0 +1,1026 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.date-time-picker {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.calendar {
+    flex: 1;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-header button {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4680A6;
+}
+
+.month-year {
+    font-size: 18px;
+    color: #4680A6;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.date {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.date.selected {
+    background-color: #4680A6;
+    color: white;
+    border-radius: 50%;
+}
+
+.time-slots {
+    flex: 1;
+}
+
+.time-slots h3 {
+    margin-bottom: 10px;
+}
+
+.time-slots-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.time-slots-list li {
+    margin-bottom: 10px;
+}
+
+.time-slots-list input {
+    margin-right: 10px;
+}
+
+
+/* Custom header styles */
+.custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #4680A6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+    /* Ensure the header is above other content */
+}
+
+.custom-header .logo img {
+    height: 40px;
+}
+
+.custom-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.custom-header nav ul li {
+    display: flex;
+}
+
+.custom-header nav ul li button {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px;
+    /* Add horizontal padding to create space */
+}
+
+.user-image {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-button img {
+    display: block;
+}
+
+/* Add margin to the user image button */
+.custom-header .user-image {
+    margin-left: 20px;
+    /* Adjust this value to add more or less space */
+}
+
+/* Dashboard column styles */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+/* Dashboard column styles */
+.dashboard-column {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    height: calc(100% - 80px);
+    width: 200px;
+    background-color: #fff;
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border-right: 1px solid #DADADA;
+    overflow-y: auto;
+}
+
+.dashboard-heading {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #DADADA;
+}
+
+.dashboard-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-button.active,
+.dashboard-button:hover {
+    background-color: #F2FAFF;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 80px;
+    /* Ensure content starts below the fixed header */
+    margin-left: 200px;
+    /* Adjust for the width of the fixed dashboard column */
+    overflow-y: auto;
+    /* Enable vertical scrolling for content */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.add-product-section {
+    margin-bottom: 40px;
+}
+
+.add-product-section h2 {
+    font-size: 24px;
+    color: #4680A6;
+    margin-bottom: 20px;
+}
+
+.product-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.tab-buttons {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 50px;
+    /* Increased horizontal padding */
+    min-width: 120px;
+    /* Set a minimum width */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+    border-radius: 10px;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: #4680A6;
+    /* Background color on hover and active state */
+    color: #fff;
+}
+
+button.create-order-button {
+    all: unset;
+    /* Resets all inherited styles */
+    font-family: 'Inter', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: right;
+    color: #5077AC;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    /* Adds pointer cursor to indicate it's a clickable element */
+}/* Add this to your existing CSS */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    margin-bottom: 20px; /* Add space between form groups */
+    width: 100%; /* Ensure form groups take full width */
+}
+
+.form-group label {
+    margin-bottom: 5px; /* Add space between label and input */
+}
+
+.form-group input {
+    width: 100%; /* Ensure inputs take full width */
+}
+
+.image-label-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start (left) */
+    width: 100%; /* Ensure wrapper takes full width */
+    margin-bottom: 10px; /* Add space between image-label pairs and input */
+}
+
+.image-label-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust spacing between image-label pairs */
+}
+
+.form-container {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
+    width: 100%; /* Ensure container takes full width */
+}
+
+textarea {
+    width: 100%; /* Ensure textarea takes full width */
+    height: 100px; /* Adjust height as needed */
+}.anotherform {
+    display: flex; /* Maintain flexbox for side-by-side elements */
+    flex-wrap: wrap; /* Allow elements to wrap to next line if needed */
+  }
+  
+  .form-group {
+    flex: 1; /* Still share space equally among all form-group divs */
+    margin-right: 10px; /* Optional spacing between divs */
+  }
+  
+  .form-group:last-child {
+    margin-right: 0;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"], select {
+    width: 100%; /* Maintain full width within form-group */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  
+.radio-color {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #4680A6; /* Border color when unchecked */
+    border-radius: 50%; /* Circular radio button */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    margin-right: 8px; /* Space between radio button and label text */
+    margin-left: 30px;
+}
+
+/* Style for the checked state */
+.radio-color:checked {
+    background-color: #4680A6;
+
+}
+
+/* Custom checkmark (optional) */
+.radio-color:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  .textarea-container {
+    width: 100%; /* Occupy full width available */
+    display: inline-block; /* Make the container behave inline */
+    vertical-align: top; /* Align the top of the textarea with radio buttons */
+  }
+  
+  .reduced-textarea {
+    width: 100%; /* Set width for textarea */
+    height: 100px; /* Adjust height as needed */
+    resize: horizontal; /* Allow vertical resizing of textarea */
+    color: #0b81d0; /* Set text color to blue */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    /* Remove default margin and padding for a tighter fit */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.save-button,
+.cancel-button {
+    padding: 15px 50px;
+    /* Increased top and bottom padding */
+    margin-top: 50px;
+    /* Add some top margin */
+    margin-bottom: 200px;
+    /* Increase bottom margin for more space */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    /* Save button default color */
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+}
+
+.save-button {
+    background-color: #4680A6;
+    /* Set save button color */
+    color: #fff;
+}
+
+
+.cancel-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+  .form-group {
+    flex: 1; /* Still share space equally among all form-group divs */
+    margin-right: 10px; /* Optional spacing between divs */
+  }
+  
+  .form-group:last-child {
+    margin-right: 0;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    height: 46px;
+    padding: 13px 16.8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #4680A6;
+    outline: none;
+}
+  .radio-container {
+    width: 100%; /* Occupy full width available */
+  }
+  
+  .radio-color {
+    display: inline-block; /* Display radio buttons inline */
+    margin-right: 10px; /* Add some space between radio buttons */
+  }
+  
+  .radio-color:last-child {
+    margin-right: 0; /* Remove margin from last radio button */
+  }
+  
+  .reduced-textarea {
+    width: 50%; /* Set width for textarea */
+    height: 100px; /* Adjust height as needed */
+    resize: vertical; /* Allow vertical resizing of textarea */
+    color: blue; /* Set text color to blue */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .form-group {
+    flex: 1;        /* Divide available space equally between child divs */
+    margin-right: 10px;  /* Add some margin between divs (optional) */
+  }
+  
+  .form-group:last-child {
+    margin-right: 0;  /* Remove margin from the last child div */
+  }
+  
+  .form-group label {
+    display: block;  /* Make labels display on a new line */
+    margin-bottom: 5px;  /* Add some space between label and input */
+    color: #4680A6;
+
+  }
+ 
+  
+.add-product-form {
+    border: 1px solid #F5F6FA;
+    background-color: #F5F6FA;
+    box-shadow: 0px 0px 10px 4px #4680A633;
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.add-product-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.add-product-form .form-group {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+}
+
+.add-product-form .form-group.full-width {
+    flex: 1 1 100%;
+    max-width: 70%;
+}
+
+.add-product-form .form-group.half-width {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+}
+
+.add-product-form .form-row.reduced-width .form-group {
+    flex: 1 1 calc(25% - 20px); /* Adjust the width to your preference */
+    max-width: calc(25% - 20px); /* Adjust the width to your preference */
+}
+
+.add-product-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4680A6;
+}
+
+.add-product-form .form-group input,
+.add-product-form .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.custom-hr {
+    width: 80%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.add-product-form .form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.form-actions{
+    margin-left: 600px;
+}.save-button,
+.cancel-button {
+    padding: 15px 50px;
+    /* Increased top and bottom padding */
+    margin-top: 50px;
+    /* Add some top margin */
+
+    /* Increase bottom margin for more space */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    /* Save button default color */
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+}
+
+.save-button {
+    background-color: #4680A6;
+    /* Set save button color */
+    color: #fff;
+}
+
+
+.cancel-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+
+
+
+.contact-button{
+    padding: 10px 30px;
+    /* Increased top and bottom padding */
+   
+    /* Increase bottom margin for more space */
+    border: 1px solid red;
+    background-color: #fff;
+    /* Default color */
+    color: red;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
+    border-radius: 50px;
+}
+.contact-button:hover{
+    color: #fff;
+    /* Default color */
+    background-color: red;
+}
+
+.radio-color {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #4680A6; /* Border color when unchecked */
+    border-radius: 50%; /* Circular radio button */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    margin-right: 8px; /* Space between radio button and label text */
+}
+
+/* Style for the checked state */
+.radio-color:checked {
+    background-color: #4680A6;
+    border: 10px solid #4680A6;
+}
+
+/* Custom checkmark (optional) */
+.radio-color:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio-label {
+    color: #000;
+    display: flex;
+    align-items: center; /* Vertically align the radio button with the label text */
+    margin-bottom: 8px; /* Space between radio button groups */
+}
+
+/* Your other CSS rules */
+
+/* Hide the default checkbox */
+.radio-color input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #B9DEFF;
+    /* Border color when unchecked */
+    border-radius: 3px;
+    /* Optional: Rounded corners */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+/* Style for the checked state */
+.radio-color input[type="radio"]:checked {
+    background-color: #B9DEFF;
+    border: 10px solid #B9DEFF;
+}
+
+.radio-color input[type="radio"]:checked::before {
+    content: '\2713';
+    /* Unicode for checkmark */
+    position: absolute;
+    top: 0;
+    left: 3px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Style the switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Checkbox checked state */
+input:checked + .slider {
+    background-color: #4680A6;
+}
+
+/* Move the slider to the right when checked */
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.input-add {
+    display: flex;
+    align-items: center;
+}
+
+.add-button {
+    background-color: #4680A6;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #356582;
+}
+.center-image {
+    position: relative;
+    display: inline-block;
+    margin-left: 90px;
+}
+
+.insert-image-button {
+    background-color: white;
+    color: #4680A6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px; /* Adjust this value as needed */
+    right: 10px;  /* Adjust this value as needed */
+}
+
+.insert-image-button:hover{
+    color: white;
+    background-color: #4680A6;
+}
+.center-image img {
+    display: block;
+}
+
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.save-button,
+.cancel-button {
+    padding: 10px 20px;
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.save-button {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+.cancel-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+.product-inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.product-inventory-table th,
+.product-inventory-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.product-inventory-table th {
+    background-color: #f4f4f4;
+}
+
+.edit-button,
+.delete-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #4680A6;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    color: #356582;
+}
+
+.custom-footer {
+    width: 100%;
+    background: #F2FAFF;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-text span {
+    color: #4680A6;
+    font-size: 14px;
+}
+
+.social-links img {
+    height: 24px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .custom-header,
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+    }
+
+    main {
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-column {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        position: relative;
+    }
+
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .section-title,
+    .form-group label {
+        text-align: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-inventory-table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-image {
+        height: 30px;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    main {
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .form-group label {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-inventory-table {
+        font-size: 12px;
+    }
+
+    .product-inventory-table th,
+    .product-inventory-table td {
+        padding: 5px;
+    }
+
+    .footer-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text span {
+        margin-bottom: 10px;
+    }
+}

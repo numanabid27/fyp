@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Set Up</title>
+    <!-- Link to external CSS stylesheet for styling the page -->
+    <link rel="stylesheet" href="../styles/setup_Team.css">
+</head>
+<body>
+    <!-- Header section of the page -->
+    <header class="custom-header">
+        <div class="logo">
+            <!-- Company logo -->
+            <img src="../assets/business boss1.png" alt="Logo">
+        </div>
+        <input type="checkbox" id="menu-toggle"> <!-- Hidden checkbox for toggling the nav -->
+        <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
+        <nav>
+            <ul>
+                <!-- Navigation buttons for Services, Products, and View Shop -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_service'">Services</button></li> <!-- Navigation button for Services -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_product'">Products</button></li> <!-- Navigation button for Products -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_shop'">View Shop</button></li> <!-- Navigation button for View Shop -->
+                <!-- Dropdown menu for user account related actions -->
+                <li class="dropdown">
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <div class="dropdown-content">
+                        <a href="#">Help</a>
+                        <a href="#">Password</a>
+                        <a href="/dashboard_subscription">Subscription</a> <!-- Dropdown link for Subscription -->
+                        <a href="/login">Log Out</a> <!-- Dropdown link for Log Out -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar for dashboard navigation -->
+    <div class="dashboard-column">
+        <a href="/dashboard">
+            <h2 class="dashboard-heading">Dashboard</h2>
+        </a>
+        <div class="dashboard-links">
+            <button class="dashboard-button active" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+            <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
+        </div>
+    </div>
+
+    <!-- Main content area -->
+    <main>
+        <div class="clients-management">
+            <h3 class="management-title">Add Team Member</h3>
+            <!-- Tab buttons for Clients and Clients Type -->
+            <!-- Form for adding or editing client information -->
+            <div class="project-form">
+                <div class="form-group">
+                    <label for="client-name">New user name </label>
+                    <input type="text" id="client-name" name="client-name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="client-email">Email</label>
+                    <input type="text" id="client-email" name="client-email" placeholder="Enter Email Address">
+                </div>
+                <div class="form-group">
+                    <label for="client-number">Permission</label>
+                    <input type="tel" id="client-number" name="client-number" placeholder="Enter Role">
+                    <button class="add-button">+</button>
+                </div>
+                <div class="form-group">
+                    <label for="client-type">Role</label>
+                    <select id="client-type" name="client-type">
+                        <option value="choose">Choose</option>
+                    </select>
+                    <button class="add-button">+</button>
+                </div>
+                
+               
+            </div>
+        </div>
+        
+        <!-- Action buttons for saving or canceling the form -->
+        <div class="form-actions">
+            <button class="save-button">Send Invite</button>
+            <button class="cancel-button">Cancel</button>
+        </div>
+
+        <!-- Section displaying a list of clients -->
+        <h3 class="clients-list-title" style="color: #4680A6;">Team Members</h3>
+        <table class="clients-list">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Permission</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>Email</td>
+                    <td>Marketing</td>
+                    <td>Admin</td>
+                    <td>
+                        <button class="edit-button">Edit</button>
+                        <button class="delete">Remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Paul You</td>
+                    <td>None</td>
+                    <td>PA</td>
+                    <td>Admin</td>
+                    <td>
+                        <button class="edit-button">Edit</button>
+                        <button class="delete">Remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Sales</td>
+                    <td>Collaborator</td>
+                    <td>
+                        <button class="edit-button">Edit</button>
+                        <button class="delete">Remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>None</td>
+                    <td>Collaborator</td>
+                    <td>
+                        <button class="edit-button">Edit</button>
+                        <button class="delete">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+         </table>
+    </main>
+
+    <!-- Footer section of the page -->
+    <footer class="custom-footer">
+        <div class="footer-text">
+            <span>English</span>
+            <span>@copyrights</span>
+            <span>Terms and Conditions</span>
+            <span>Privacy</span>
+            <span>Cookie Settings</span>
+        </div>
+        <div class="social-links">
+            <img src="../assets/logos Group.png" alt="Social Icons">
+        </div>
+    </footer>
+    
+    <!-- Link to external JavaScript file for dropdown functionality -->
+    <script src="../utilis/drop_down.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="../styles/Products_Page.css">
+</head>
+
+<body>
+    <header class="custom-header">
+        <div class="logo">
+            <img src="../assets/business boss1.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_service'">Services</button></li> <!-- Navigation button for Services -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_product'">Products</button></li> <!-- Navigation button for Products -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_shop'">View Shop</button></li> <!-- Navigation button for View Shop -->
+                <li class="dropdown">
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <div class="dropdown-content">
+                        <a href="#">Help</a> <!-- Dropdown link for Help -->
+                        <a href="#">Password</a> <!-- Dropdown link for Password -->
+                        <a href="/dashboard_subscription">Subscription</a> <!-- Dropdown link for Subscription -->
+                        <a href="/login">Log Out</a> <!-- Dropdown link for Log Out -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="dashboard-column">
+            <a href="/dashboard">
+                <h2 class="dashboard-heading">Dashboard</h2>
+            </a>
+            <div class="dashboard-links">
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
+            </div>
+        </div>
+
+        <main>
+            <div class="add-product-section">
+
+                <div class="tab-buttons">
+                    <button class="tab-button active">Products</button>
+                    <button class="tab-button" onclick="window.location.href='/supplier'">Suppliers</button>
+                </div>
+                <button class="create-order-button">+ Add Product</button> <!-- Button to add new project -->
+
+
+                <form class="add-product-form">
+                    <div class="form-row">
+                        <div class="center-image">
+                            <button class="insert-image-button">Upload Image</button>
+                            <img src="../assets/Product Page.png" alt="Product Image">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="product-name">Product Name</label>
+                            <input type="text" id="product-name" name="product-name" placeholder="Enter product name">
+                        </div>
+                        <hr class="custom-hr">
+
+                        <div class="form-group half-width">
+                            <label for="product-feature">Description</label>
+                            <input type="text" id="product-feature" name="product-feature"
+                                placeholder="Enter Description">
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="subscription">Phone Number</label>
+                            <input type="text" id="subscription" name="subscription"
+                                placeholder="Enter product number, e.g barcode,SKU ">
+                        </div>
+
+                        <div class="form-row reduced-width">
+                            <div class="form-group">
+                                <label for="integration">Cost Price</label>
+                                <input type="text" id="integration" name="integration">
+                                <label for="" style="font-size: 11px; color:rgb(78, 76, 76)">How much the product cost you?</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity">Sales Price</label>
+                                <input type="number" id="quantity" name="quantity">
+                                <label for="" style="font-size: 10px; color:rgb(78, 76, 76)">How much are you selling the product?</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity">Quantity</label>
+                                <input type="number" id="quantity" name="quantity">
+                                <label for="" style="font-size: 10px; color:rgb(78, 76, 76)">How many items do you have to sell?</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity">Discount</label>
+                                <input type="number" id="quantity" name="quantity">
+                                <label for="" style="font-size: 10px; color:rgb(78, 76, 76)">Will you be giving discount?</label>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <label for="quantity">Product Options</label>
+                            <input type="text" id="quantity" name="quantity"
+                                placeholder="Add product sizes, colours and more">
+                        </div>
+
+
+                    </div>
+
+
+                    <label for="" style="color:#4680A6;">Payment Method</label><br>
+                    <input class="radio-color" type="radio" name="invoice-notification" class="checkbox" checked> In
+                    Person
+                    <input class="radio-color" type="radio" name="invoice-notification" class="checkbox"> Online Payment
+
+                    <input class="radio-color" type="radio" name="invoice-notification" class="checkbox"> Allow client
+                    to choose
+                    <br>
+                    <div class="form-group half-width">
+                        <label for="product-feature">Delivery Method</label>
+                        <input type="text" id="product-feature" name="product-feature"
+                            placeholder="Add pickup address  ">
+                    </div>
+                    <br>
+
+                    <div class="form-group half-width">
+                        <input type="text" id="subscription" name="subscription"
+                            placeholder="Client shipping address  ">
+                    </div>
+                    <br>
+                    <input class="radio-color" type="radio" name="invoice-notification" class="checkbox"> Allow client
+                    to choose
+                 
+                    <div class="form-group full-width">
+                        <br>
+                        <label for="product-name">Delivery Time</label>
+                        <select style="width: 40%;">
+                            <option value="completed">Choose</option>
+
+                        </select>
+                    </div>
+<br><br>
+                    <div class="form-group full-width">
+                        <label for="product-name">Message or Question</label>
+                        <input type="text" id="product-name" name="product-name" placeholder="Enter message or question you want your Clients to answer ">
+                    </div>
+                    <hr class="custom-hr">
+
+                    <div class="form-group half-width">
+                        <label for="product-feature">Add Storage location </label>
+                        <input type="text" id="product-feature" name="product-feature"
+                            placeholder="Add">
+                    </div>
+                    <div class="form-group half-width">
+                        <br>
+                        <label for="subscription">Add Supplier</label>
+                        <select style="width: 40%;" >
+                            <option value="completed">Choose</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                       <br>
+                        <label for="quantity">Status?</label>
+                      <label for="">If status is active, this products will show in your shop </label>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="save-button" type="submit">Save</button>
+                        <button class="cancel-button" type="reset">Cancel</button>
+                    </div>
+                </form>
+
+           
+
+                <br>
+                <br>
+                <br>
+
+                <h2 class="section-title">Product Inventory</h2>
+                <table class="product-inventory-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Cost Price</th>
+                            <th>Sales Price</th>
+                            <th>Quantity</th>
+                            <th>Storage Location</th>
+                            <th>Product Number</th>
+                            <th>Status</th>
+                            <th>Supplier</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Coffee Grains</td>
+                            <td>$500</td>
+                            <td>$800</td>
+                            <td>100 Units</td>
+                            <td>New</td>
+                            <td>#202</td>
+                            <td>Active</td>
+                            <td> <button class="contact-button">Contact</button></td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="delete-button">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Avocado</td>
+                            <td>$250</td>
+                            <td>$400</td>
+                            <td>50 Units</td>
+                            <td>Old</td>
+                            <td>#101</td>
+                            <td>Inactive</td>
+                            <td> <button class="contact-button">Contact</button></td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="delete-button">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer class="custom-footer">
+        <div class="footer-text">
+            <span>English</span>
+            <span>@copyrights</span>
+            <span>Terms and Conditions</span>
+            <span>Privacy</span>
+            <span>Cookie Settings</span>
+        </div>
+        <div class="social-links">
+            <img src="../assets/logos Group.png" alt="Social Icons">
+        </div>
+    </footer>
+    <script src="../utilis/drop_down.js"></script>
+</body>
+
+</html>

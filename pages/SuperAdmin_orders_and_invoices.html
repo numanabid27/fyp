@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders and Invoices</title>
+    <link rel="stylesheet" href="../styles/SuperAdmin_orders_and_invoices.css">
+</head>
+<body>
+    <div class="container">
+        <header class="custom-header">
+            <div class="logo">
+                <img src="../assets/business boss1.png" alt="Logo">
+            </div>
+            <input type="checkbox" id="menu-toggle"> <!-- Hidden checkbox for toggling the nav -->
+            <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <button class="nav-button user-image-btn"><img src="../assets/admin.png" alt="User"
+                                class="user-image"></button>
+                        <div class="dropdown-content">
+                            <a href="/homepage">View site</a>
+                            <a href="/login">logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="dashboard-column">
+            <a href="/Superdashboard">
+                <h2 class="dashboard-heading">Dashboard</h2>
+            </a>
+            <div class="dashboard-links">
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_members'">Members</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_plan'">Plan</button>
+                <button class="dashboard-button active" onclick="window.location.href='/Superdashboard_orders'">Orders & Invoices</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_notifications'">Notifications</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_landingPAge'">Landing Page</button>
+                <button class="dashboard-button" onclick="window.location.href='/Superdashboard_setting'">Settings</button>
+            </div>
+        </div>
+
+        <main>
+            <div class="button-container">
+                <div class="tab-buttons">
+                    <button class="tab-button "  onclick="window.location.href='/Superdashboard_orders'">Orders</button> <!-- Tab button for Orders -->
+                    <button class="tab-button active">Invoices</button> <!-- Active tab button for Invoices -->
+                </div>
+            </div>
+            <button class="create-order-button">+ Create an Invoice</button> <!-- Button to add new project -->
+            <h1 class="Invoices-title" style="color: #4680A6;">Invoices</h1> <!-- Title for Invoices section -->
+
+
+            <section class="invoices-summary">
+
+                <div class="summary-box">
+                    <img src="../assets/Avatar.png" alt="Avatar">
+                    <div class="text-content">
+                        <h3>Total</h3>
+                        <p>$5,300.00</p>
+                        <span>from 12 invoices</span>
+                    </div>
+                </div>
+                <div class="summary-box">
+                    <img src="../assets/Avatar (1).png" alt="Avatar">
+                    <div class="text-content">
+                        <h3>Paid</h3>
+                        <p>$1,439.60</p>
+                        <span>from 3 invoices</span>
+                    </div>
+                </div>
+
+                <div class="summary-box">
+                    <img src="../assets/Avatar (2).png" alt="Avatar">
+                    <div class="text-content">
+                        <h3>Pending</h3>
+                    <p>$276.87</p>
+                    <span>from 2 invoices</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="invoices-list">
+                <h3>Cancelled (0)</h3>
+                <h3>Paid (3)</h3>
+                <div class="invoice-item">
+                    <div class="invoice-info">
+                        <div class="invoice-id"> INV-0019</div>
+                        <div class="invoice-company">ACME SRL</div>
+                        <div class="invoice-amount">$55.50</div>
+                        <div class="invoice-dates">
+                            <span>Issued 23/11/2022</span>
+
+                        </div>
+                        <span>Due 28/11/2022</span>
+                    </div>
+                    <div class="invoice-status paid">PAID</div>
+
+                </div>
+                <div class="invoice-item">
+                    <div class="invoice-info">
+                        <div class="invoice-id">INV-0018</div>
+                        <div class="invoice-company">ACME SRL</div>
+                        <div class="invoice-amount">$688.90</div>
+                        <div class="invoice-dates">
+                            <span>Issued 23/11/2022</span>
+
+                        </div>
+                        <span>Due 28/11/2022</span>
+                    </div>
+                    <div class="invoice-status paid">PAID</div>
+                </div>
+                <div class="invoice-item">
+                    <div class="invoice-info">
+                        <div class="invoice-id">INV-0017</div>
+                        <div class="invoice-company">ACME SRL</div>
+                        <div class="invoice-amount">$695.20</div>
+                        <div class="invoice-dates">
+                            <span>Issued 23/11/2022</span>
+
+                        </div>
+                        <span>Due 28/11/2022</span>
+                    </div>
+                    <div class="invoice-status paid">PAID</div>
+                </div>
+
+                <h3>Pending (2)</h3>
+                <div class="invoice-item">
+                    <div class="invoice-info">
+                        <div class="invoice-id">INV-0021</div>
+                        <div class="invoice-company">ACME SRL</div>
+                        <div class="invoice-amount">$23.11</div>
+                        <div class="invoice-dates">
+                            <span>Issued 21/11/2022</span>
+
+                        </div>
+                        <span>Due 18/12/2022</span>
+                    </div>
+                    <div class="invoice-status pending">PENDING</div>
+                </div>
+                <div class="invoice-item">
+                    <div class="invoice-info">
+                        <div class="invoice-id">INV-0020</div>
+                        <div class="invoice-company">ACME SRL</div>
+                        <div class="invoice-amount">$253.76</div>
+                        <div class="invoice-dates">
+                            <span>Issued 23/11/2022</span>
+
+                        </div>
+                        <span>Due 10/12/2022</span>
+                    </div>
+                    <div class="invoice-status pending">PENDING</div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="custom-footer">
+            <div class="footer-text">
+                <span>English</span> <!-- Language selector -->
+                <span>@copyrights</span> <!-- Copyright information -->
+                <span>Terms and Conditions</span> <!-- Link to Terms and Conditions -->
+                <span>Privacy</span> <!-- Link to Privacy Policy -->
+                <span>Cookie Settings</span> <!-- Cookie settings link -->
+            </div>
+            <div class="social-links">
+                <img src="../assets/logos Group.png" alt="Social Icons"> <!-- Social media icons -->
+            </div>
+        </footer>
+        <script src="../utilis/drop_down.js"></script> <!-- Link to external JavaScript file -->
+    </div>
+</body>
+</html>

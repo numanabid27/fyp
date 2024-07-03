@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/plain_appointment_confirmation.css">
+    <title>Appointment Confirmation</title>
+</head>
+
+<body>
+    <div class="confirmation">
+
+        <div class="email-container">
+            <div class="invoice-header">
+                <h1>Appointment Confirmation</h1>
+            </div>
+
+            <div class="invoice-details">
+                <div class="detail">
+                    <label for="order-name"><strong>Order Name:</strong></label>
+                    <input class="input" type="text" id="order-name" placeholder="%Order Name%">
+                </div>
+                <div class="detail">
+                    <label for="date"><strong>Date:</strong></label>
+                    <input  class="input" type="text" id="date" placeholder="%Date%">
+                </div>
+                <div class="detail">
+                    <label for="time"><strong>Time:</strong></label>
+                    <input  class="input"  type="text" id="time" placeholder="%Time%">
+                </div>
+                <div class="detail">
+                    <label for="location"><strong>Location:</strong></label>
+                    <input class="input" type="text" id="location" placeholder="%Location%">
+                </div>
+                <div class="detail">
+                    <label for="location"><strong>Customer Name:</strong></label>
+                    <input class="input" type="text" id="location" placeholder="%Name%">
+                </div>
+                <div class="detail">
+                    <label for="link"><strong>Link:</strong></label>
+                    <input  class="input" type="text" id="link" placeholder="%Link%">
+                </div>
+            </div>
+
+            <div class="email-subject">
+                <label for="subject"><strong>Subject:</strong></label>
+                <input  class="input" type="text" id="subject" placeholder="Confirmation: Your Order is confirmed [%Calendar Name%]">
+            </div>
+            <div class="body">
+            <div class="email-body">
+                <p>Hello <strong>%Customer Name%</strong>,</p>
+                <p>Great news, your order has been placed! 🎉</p>
+                <p>Order Details:</p>
+                <ul>
+                    <li><img src="../assets/check.png" alt=""> Date: [Date]</li>
+                    <li><img src="../assets/check.png" alt="">Time: [Time]</li>
+                    <li><img src="../assets/check.png" alt=""> 60 coffee bags: [Description]</li>
+                </ul>
+                <p>We're looking forward to delivering to you soon. Have a great day!</p>
+            </div>
+        </div>
+            <div class="options">
+                <div class="checkbox">
+                    <input class="remember-me" type="checkbox" >
+                    <label for="confirm-button">Include confirmation button</label>
+                </div>
+                <div class="checkbox">
+                    <input class="remember-me" type="checkbox" >
+                    <label for="cancel-link">Include cancel link</label>
+                </div>
+                <div class="checkbox">
+                    <input class="remember-me" type="checkbox" >
+                    <label for="contract-policy">Include contract & cancellation policy</label>
+                </div>
+            </div>
+    
+        </div>
+
+
+      
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Notifications</title>
+    <link rel="stylesheet" href="../styles/Notifications page.css"> <!-- Link to external CSS file -->
+</head>
+
+<body>
+    <header class="custom-header">
+        <!-- Header section with logo and navigation -->
+        <div class="logo">
+            <img src="../assets/business boss1.png" alt="Logo">
+        </div>
+        <input type="checkbox" id="menu-toggle"> <!-- Hidden checkbox for toggling the nav -->
+        <label for="menu-toggle" class="menu-button">&#9776;</label> <!-- Menu button for toggling the nav -->
+        <nav>
+            <ul>
+                <!-- Navigation links -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_service'">Services</button></li> <!-- Navigation button for Services -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_product'">Products</button></li> <!-- Navigation button for Products -->
+                <li><button class="nav-button" onclick="window.location.href='/dashboard_shop'">View Shop</button></li> <!-- Navigation button for View Shop -->
+                <li class="dropdown">
+                    <!-- Dropdown menu with user options -->
+                    <button class="nav-button"><img src="../assets/admin.png" alt="User" class="user-image"></button>
+                    <div class="dropdown-content">
+                        <a href="#">Help</a>
+                        <a href="#">Password</a>
+                        <a href="/dashboard_subscription">Subscription</a> <!-- Dropdown link for Subscription -->
+                        <a href="/login">Log Out</a> <!-- Dropdown link for Log Out -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Main content container -->
+        <div class="dashboard-column">
+            <!-- Dashboard section -->
+            <a href="/dashboard">
+                <h2 class="dashboard-heading">Dashboard</h2>
+            </a>
+            <div class="dashboard-links">
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_shopSetup'">Set Up</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_project'">Projects</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_clients'">Clients</button>
+                <button class="dashboard-button" onclick="window.location.href='/dashboard_orders'">Orders & Invoices</button>
+                <button class="dashboard-button active" onclick="window.location.href='/dashboard_notifications'">Notifications</button>
+            </div>
+        </div>
+
+        <main>
+            <!-- Main content section -->
+            <div class="notifications">
+                <!-- Notifications section -->
+                <h2 class="section-title">Automatic Notifications</h2>
+                <p>Send automatic notification messages and reminders to your clients. View and edit templates.</p>
+                <div class="notification-form">
+                    <!-- Notification setup form -->
+                    <div class="form-group">
+                        <label>Setup Email</label>
+                        <div class="email-setup">
+                            <!-- Email setup options -->
+                            <input class="radio-color" type="radio" name="email-setup" checked> Use default Business Bosses Pro email<br>
+                            <input class="radio-color" type="radio" name="email-setup"> Use another email<br>
+                            <div class="input-container">
+                                <input class="input" type="text" value="" placeholder="Enter a different Email">
+                                <input class="input1" type="text" placeholder="Phone Number">
+                            </div>
+                            <br>
+                            <button class="verify-button ">Verify</button>
+                            <p class="content">You will send and receive notifications to this email and phone number</p>
+                        </div>
+                    </div>
+                    <hr><br>
+                    <div class="form-group">
+                        <label>Booking Confirmation</label>
+                        <div class="booking-confirmation">
+                            <!-- Booking confirmation settings -->
+                            <p class="content">This message will be sent to your clients immediately after booking is made</p>
+                            <br>
+                            <input class="remember-me" type="checkbox" checked> Email
+                            <input class="remember-me" type="checkbox" class="checkbox" > Text
+                            <br>
+                            <br>
+                            <p class="content">Send me a notification as well? </p>
+                            <br>
+                            <input class="radio-color" type="radio" name="booking-notification" checked> Yes
+                            <input class="radio-color" type="radio" name="booking-notification" class="checkbox"> No
+                            <button class="view-template-button1">View Template</button><br>
+                        </div>
+                    </div>
+                    <hr><br>
+                    <div class="form-group">
+                        <label>Invoice Reminder</label>
+                        <div class="invoice-reminder">
+                            <!-- Invoice reminder settings -->
+                            <p class="content">This message will be sent if invoice has not being paid</p>
+                            Send reminder before appointment:
+                            <div class="input-container">
+                                <input class="input" type="text" value="6">
+                                <input class="input1" type="text" placeholder="min/hours/day">
+                            </div>
+                            <br>
+                            Send me a notification as well?<br>
+                            <input class="radio-color" type="radio" name="invoice-notification" class="checkbox" checked> Yes
+                            <input class="radio-color" type="radio" name="invoice-notification" class="checkbox"> No
+                            <button class="view-template-button1">View Template</button><br>
+                        </div>
+                    </div>
+                    <hr><br>
+                    <div class="form-group">
+                        <label>Appointment Reminder</label>
+                        <div class="appointment-reminder">
+                            <!-- Appointment reminder settings -->
+                            Send reminder before appointment:
+                            <div class="input-container">
+                                <input class="input" type="text" value="6">
+                                <input class="input1" type="text" placeholder="min/hours/day">
+                            </div>
+                            <br>
+                            <input class="remember-me" type="checkbox" checked> Email
+                            <input class="remember-me" type="checkbox" class="checkbox"> Text
+                            <br>
+                            Send me a notification as well?<br>
+                            <input class="radio-color" type="radio" name="invoice-notification" checked> Yes
+                            <input class="radio-color" type="radio" name="invoice-notification" class="checkbox"> No
+                            <button class="view-template-button2">View Template</button><br>
+                            <br>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <hr><br>
+                    <div class="form-group">
+                        <label>Thank You Message</label>
+                        <div class="thank-you-message">
+                            <!-- Thank you message settings -->
+                            Send thank you after booking:
+                            <div class="input-container">
+                                <input class="input" type="text" value="6">
+                                <input class="input1" type="text" placeholder="min/hours/day">
+                            </div>
+                            <br>
+                            <input class="remember-me" type="checkbox" checked> Email
+                            <input class="remember-me" type="checkbox" class="checkbox"> Text
+                            <button class="view-template-button1">View Template</button>
+                            <br>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <hr><br>
+                    <div class="form-group">
+                        <label>Booking Feedback</label>
+                        <div class="booking-feedback">
+                            <!-- Booking feedback settings -->
+                            <p class="content"> This notification can be sent after booking is completed</p>
+                            <button class="view-template-button1">View Template</button>
+                            <br>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <hr><br>
+                    <div class="form-group">
+                        <label>Contract and Cancellation Policy</label>
+                        <div class="contract-policy">
+                            <!-- Contract and cancellation policy settings -->
+                            <p class="content"> This message can be included into any appointment and order that you created.</p>
+                            <button class="view-template-button1">View Template</button>
+                            <br>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <hr><br>
+                    <div class="form-actions">
+                        <!-- Form action buttons -->
+                        <button class="cancel-button">Cancel</button>
+                        <button class="save-button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="custom-footer">
+        <!-- Footer section -->
+        <div class="footer-text">
+            <span>English</span>
+            <span>@copyrights</span>
+            <span>Terms and Conditions</span>
+            <span>Privacy</span>
+            <span>Cookie Settings</span>
+        </div>
+        <div class="social-links">
+            <!-- Social links -->
+            <img src="../assets/logos Group.png" alt="Social Icons">
+        </div>
+    </footer>
+
+    <script src="../utilis/drop_down.js"></script> <!-- JavaScript file inclusion -->
+</body>
+
+</html>

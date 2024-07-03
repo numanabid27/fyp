@@ -1,0 +1,501 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Custom header styles */
+.custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #4680A6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+    /* Ensure the header is above other content */
+}
+
+.custom-header .logo img {
+    height: 40px;
+}
+
+.custom-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.custom-header nav ul li {
+    display: flex;
+}
+
+.custom-header nav ul li button {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px;
+    /* Add horizontal padding to create space */
+}
+
+.user-image {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-button img {
+    display: block;
+}
+
+/* Add margin to the user image button */
+.custom-header .user-image {
+    margin-left: 20px;
+    /* Adjust this value to add more or less space */
+}
+
+/* Dashboard column styles */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+.dashboard-column {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    height: calc(100% - 80px);
+    width: 200px;
+    background-color: #fff;
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border-right: 1px solid #DADADA;
+    overflow-y: auto;
+}
+
+.dashboard-heading {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #DADADA;
+}
+
+.dashboard-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-button.active,
+.dashboard-button:hover {
+    background-color: #F2FAFF;
+}
+
+
+/* Setup Container */
+.setup-container {
+    margin-top: 80px;
+    /* Adjusted margin to create space for the fixed header */
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.setup-heading {
+    margin-bottom: 20px;
+}
+
+.setup-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #4680A6;
+}
+
+/* Tab Buttons */
+.tab-buttons {
+    display: flex;
+    gap: 200px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 70px;
+    /* Increased horizontal padding */
+    min-width: 120px;
+    /* Set a minimum width */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+
+.tab-button.active,
+.tab-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+/* Form Container */
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+.image-upload {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-container {
+    position: relative;
+    /* Make the container relative */
+    width: 432px;
+    /* Set width to match image width */
+    height: 156px;
+    /* Set height to match image height */
+}
+
+.image-upload img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.upload-button {
+    position: absolute;
+    bottom: 10px;
+    /* Adjust as needed */
+    right: 10px;
+    /* Adjust as needed */
+    padding: 10px 20px;
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.upload-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+.form-group input {
+    width: 420px;
+    /* Fixed width */
+    height: 46px;
+    /* Fixed height */
+    padding: 11px 14.8px;
+    /* Padding values adjusted */
+    gap: 0;
+    /* Removed gap */
+    border-radius: 8px 0 0 0;
+    /* Rounded corners */
+    border: 1px solid #B2B2B2;
+    /* Border color and width */
+    opacity: 1;
+    /* Full opacity */
+    background: #FFFFFF;
+    /* White background */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: #4680A6;
+}
+
+.form-group input,
+.form-group select {
+    width: 420px;
+    height: 46px;
+    padding: 11px 14.8px;
+    gap: 0;
+    border-radius: 8px;
+    border: 1px solid #B2B2B2;
+    opacity: 1;
+    background: #FFFFFF;
+}
+
+.form-group select {
+    /* Additional styles specific to select elements if needed */
+    /* Example: */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('arrow.png');
+    /* Example for custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 30px;
+    /* Adjust as needed */
+}
+
+.form-group input#slogan {
+    height: 100px;
+    /* Increased height */
+    /* You can also adjust other styles as needed */
+    padding: 15px 20px;
+    /* Example padding adjustment */
+    font-size: 16px;
+    /* Example font size adjustment */
+    /* Add any other specific styles here */
+}
+
+.shop-link-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Adjust the gap between elements */
+    margin-bottom: 10px;
+    /* Add margin at the bottom */
+}
+
+.embed-button {
+    padding: 20px 30px;
+    /* Adjusted padding */
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    max-width: 200px;
+    display: inline-block;
+    margin-top: 10px;
+    /* Add margin at the top */
+    margin-left: 200px;
+}
+
+.embed-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Adjust the spacing between labels and switches */
+}
+
+.label-custom {
+    color: #4680A6;
+    /* Custom color for labels */
+    font-weight: bold;
+    /* Optionally make the text bold */
+    margin-bottom: 0;
+    /* Adjust margin as needed */
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #4680A6;
+}
+
+input:checked+.slider:before {
+    transform: translateX(14px);
+}
+
+/* Form Actions */
+.form-actions {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cancel-button {
+    padding: 10px 20px;
+    border: 1px solid #4680A6;
+    background-color: #fff;
+    color: #4680A6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+}
+
+.save-button {
+    padding: 10px 20px;
+    border: 1px solid #4680A6;
+    background-color: #4680A6;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+}
+
+.cancel-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+/* Custom footer styles */
+.custom-footer {
+    width: 100%;
+    background: #F2FAFF;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-text span {
+    color: #4680A6;
+    font-size: 14px;
+}
+
+.social-links img {
+    height: 24px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-column {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+    }
+
+    .setup-container {
+        margin-left: 0;
+    }
+
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,354 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background: #4680A6;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.back-link {
+    padding: 25px 25px 25px 25px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(109, 109, 109, 1);
+    background-color: rgba(255, 255, 255, 0);
+}
+.back-link img {
+    vertical-align: middle;
+}
+
+.create-account-heading {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35.16px;
+    text-align: left;
+    color: #19547b;
+    padding: 30px;
+    margin: 0;
+}
+
+.google-login {
+    width: 299.74px;
+    height: 48.51px;
+    position: relative;
+    padding: 13.86px 8.66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8.66px;
+    border-radius: 43.32px 0px 0px 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 12.99px 43.32px 0px rgba(91, 129, 180, 0.12);
+    opacity: 1;
+    border: none;
+    cursor: pointer;
+    margin: 1rem auto; /* Center the button horizontally */
+}
+
+.google-login .google-icon {
+    width: 20.79px;
+    height: 20.79px;
+    padding: 1.74px 2.43px 2.05px 1.36px;
+    opacity: 1;
+}
+
+.google-login .google-text {
+    font-family: 'Gilroy-SemiBold', sans-serif;
+    font-size: 13.86px;
+    line-height: 16.24px;
+    text-align: left;
+    color: #4680A6;
+    opacity: 1;
+}
+
+.choice {
+    padding: 25px 25px 25px 25px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(109, 109, 109, 1);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.login-btn{
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 50px; 
+    text-decoration: none;
+    background:none;
+    color: white;
+}
+ .signup-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 50px; 
+    text-decoration: none;
+    background:white;
+    color: #4680A6;
+}
+.Login-btn{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 43px;
+    background: linear-gradient(350.53deg, #4680A6 9.42%, #B9DEFF 127.53%);
+    color: white;
+    border: none;
+    /* Remove the border completely */
+    cursor: pointer;
+    margin: 1rem auto;
+    /* Centering the button horizontally */
+    width: 299.74px;
+    /* Fixed width */
+    height: 48.51px;
+    box-shadow: 0px 5px 30px 0px rgba(105, 144, 192, 0.5);
+}
+/* Main Content */
+main {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 435px;
+    height: 682px;
+    text-align: left;
+}
+
+.welcome-box {
+    position: relative;
+    background: linear-gradient(to top, #4680A6 0%, #B9DEFF 100%);
+    width: 513px;
+    height: 678px;
+    padding: 2rem;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.login-box h2 {
+    margin-bottom: 1rem;
+    color: #4285f4;
+}
+
+.welcome-box h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35.16px;
+    text-align: center;
+    color: #4680A6;
+    margin-top: 70px;
+}
+
+.welcome-box p:first-of-type {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    text-align: center;
+    color: #FAFBFF;
+}
+
+.signup-link {
+    position: relative;
+    top: 420px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #FAFBFF;
+}
+
+.signup-link a {
+    color: #B9DEFF;
+    text-decoration: none;
+}
+
+.underline {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    padding-bottom: 2px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+form label {
+    color: #4285f4;
+}
+
+form input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form .forgot-password {
+    text-align: right;
+    color: #4285f4;
+    text-decoration: none;
+}
+
+form .remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4285f4;
+}
+
+
+/* Footer */
+footer {
+    background: rgba(242, 250, 255, 1);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer .footer-links,
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+footer .footer-links a {
+    color: rgba(70, 128, 166, 1);
+    text-decoration: none;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer .social-links img {
+    height: 40px;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .login-container {
+        flex-direction: column;
+    }
+
+    /* Hide the checkbox */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Hide the nav by default */
+    header nav {
+        display: none;
+    }
+
+    /* Show the navbar when the checkbox is checked */
+    #menu-toggle:checked + .menu-button + nav {
+        display: block;
+        position: absolute;
+        background: rgba(70, 128, 166, 1);
+        top: 80px;
+        width: 100%;
+        left: 0;
+        z-index: 1000; /* Ensure navbar appears above other content */
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul {
+        flex-direction: column;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul li {
+        margin: 1rem 0;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Hide the menu button and show nav normally */
+    .menu-button {
+        display: none;
+    }
+    /* Ensure the menu toggle checkbox is hidden */
+    #menu-toggle {
+        display: none;
+    }
+    /* Show the header navigation */
+    header nav {
+        display: flex;
+    }
+}

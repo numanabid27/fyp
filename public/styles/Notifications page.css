@@ -1,0 +1,809 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Custom header styles */
+.custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #4680A6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000; /* Ensure the header is above other content */
+}
+
+.custom-header .logo img {
+    height: 40px;
+}
+
+.custom-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.custom-header nav ul li {
+    display: flex;
+}
+
+.custom-header nav ul li button {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 20px; /* Add horizontal padding to create space */
+}
+
+.user-image {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-button img {
+    display: block;
+}
+
+/* Add margin to the user image button */
+.custom-header .user-image {
+    margin-left: 20px; /* Adjust this value to add more or less space */
+}
+/* Toggle Menu Button */
+.menu-button {
+    display: none;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+/* Dashboard column styles */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+.dashboard-column {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    height: calc(100% - 80px);
+    width: 200px;
+    background-color: #fff;
+    padding: 20px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border-right: 1px solid #DADADA;
+    overflow-y: auto;
+}
+
+.dashboard-heading {
+    color: black;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #DADADA;
+}
+
+.dashboard-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-button {
+    background-color: #fff;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-button.active,
+.dashboard-button:hover {
+    background-color: #F2FAFF;
+}
+main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 80px;
+    /* Ensure content starts below the fixed header */
+    margin-left: 200px;
+    /* Adjust for the width of the fixed dashboard column */
+    overflow-y: auto;
+    /* Enable vertical scrolling for content */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.notifications {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #4680A6;
+}
+
+.notification-form {
+    background-color: #F9F9F9;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.notifications label {
+    color: #4680A6;
+}
+
+.email-setup, .booking-confirmation, .invoice-reminder, .appointment-reminder, .thank-you-message, .booking-feedback, .contract-policy {
+    background-color: #F9F9F9;
+    padding: 15px;
+   
+}
+hr {
+  
+    border: none; /* Remove the default border */
+    border-top: 2px solid lightgrey; /* Set a light color */
+    transition: border-color 0.3s; /* Smooth transition for the color change */
+}
+
+hr:hover {
+    border-top: 2px solid #4680A6; /* Change the color to blue on hover */
+}
+.form-group input[type="email"],
+.form-group input[type="text"] {
+    display: inline;
+  width: 271px;
+  height: 46px;
+  border-radius:50px; /* Top-left rounded corner only */
+  border: 1px solid #ccc; /* Change to desired border color */
+  padding: 10px; /* Add some padding for better readability */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  opacity: 1; /* Make the inputs visible */
+ 
+}
+
+.form-group input[type="text"]{
+    margin-top: 10px;
+}
+.content{
+   
+font-size: 14px;
+font-weight: 300;
+line-height: 24px;
+text-align: left;
+color: #817c7c;
+
+}/* Radio Button Styles */
+
+/* Default checkbox styles */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #4680A6;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    margin-left: 30px;
+}
+
+/* Style for the checked state */
+input[type="checkbox"]:checked {
+    background-color: #4680A6;
+    border: 2px solid #4680A6;
+}
+
+/* Add a checkmark (optional) */
+input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 0;
+    left: 3px;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.radio-color {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #4680A6; /* Border color when unchecked */
+    border-radius: 50%; /* Circular radio button */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    margin-right: 8px; /* Space between radio button and label text */
+    margin-left: 30px;
+}
+
+/* Style for the checked state */
+.radio-color:checked {
+    background-color: #4680A6;
+
+}
+
+/* Custom checkmark (optional) */
+.radio-color:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio-label {
+    color: #000;
+    display: flex;
+    align-items: center; /* Vertically align the radio button with the label text */
+    margin-bottom: 8px; /* Space between radio button groups */
+}
+
+/* Your other CSS rules */
+
+/* Hide the default checkbox */
+.radio-color input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #B9DEFF;
+    /* Border color when unchecked */
+    border-radius: 3px;
+    /* Optional: Rounded corners */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+/* Style for the checked state */
+.radio-color input[type="radio"]:checked {
+    background-color: #B9DEFF;
+    border: 10px solid #B9DEFF;
+}
+
+.radio-color input[type="radio"]:checked::before {
+    content: '\2713';
+    /* Unicode for checkmark */
+    position: absolute;
+    top: 0;
+    left: 3px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.checkbox{
+    margin-left: 30px;
+}
+.verify-button {
+    background-color: #4680A6;
+    color: white;
+    border: none;
+    padding: 10px 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-left: 520px;
+}
+.view-template-button1 {
+    background-color: #4680A6;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-left: 530px;
+   
+}
+
+.view-template-button2 {
+    background-color: #4680A6;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-left:400px;
+   
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+
+.save-button,
+.cancel-button {
+    padding: 15px 30px;
+    /* Increased top and bottom padding */
+  
+    /* Increase bottom margin for more space */
+
+   border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+}
+
+.save-button {
+    background-color: #4680A6;
+    /* Set save button color */
+    color: #fff;
+}
+.cancel-button{
+    background-color: none;
+    color: #4680A6;
+}
+
+.cancel-button:hover {
+    background-color: #4680A6;
+    color: #fff;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4680A6;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+/* Custom footer styles */
+.custom-footer {
+
+    width: 100%;
+    background: #F2FAFF;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-text {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-text span {
+    color: #4680A6;
+    font-size: 14px;
+}
+
+.social-links img {
+    height: 24px;
+}
+/* Parent container */
+
+/* Container for inputs */
+.input-container {
+    display: flex; /* Display inputs side by side */
+}
+
+.input {
+    width: 45px;
+    height: 39.26px;
+    border-radius: 8px;
+    border: 1px solid #B2B2B2;
+    color: #000000; /* Text color black */
+    background-color: #FFFFFF; /* Background color white */
+    opacity: 1;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+
+.input1 {
+    width: 98.57px;
+    height: 39.26px;
+    border-radius: 0px 8px 8px 0px;
+    border-width: 1px 0px 0px 1px;
+    border-color: #B2B2B2;
+    color: #000000; /* Text color black */
+    background-color: #FFFFFF; /* Background color white */
+    opacity: 1;
+    box-sizing: border-box;
+   
+}
+
+/* Change border and outline color to blue when input is focused */
+.input:focus, .input1:focus {
+    border-color: #B2B2B2; /* Keep the border color same */
+    outline: 2px solid #4680A6; /* Change the outline color to blue */
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        text-align: left;
+        padding: 20px 16px;
+    }
+
+    main {
+        /* margin-left: 0;
+        padding: 20px 16px; */
+        margin-left: 200px;
+        padding: 10px;
+    }
+    .task-header,
+    .task {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background-color: #4680A6;
+        display: flex;
+        align-items: center;  /* This centers elements vertically */
+        padding: 0 16px;
+        z-index: 1000;
+      }
+    .custom-header nav {
+        display: none; /* Hide the menu by default */
+      }
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .custom-header nav ul li {
+        width: 100%;
+    }
+    .dropdown-content {
+        display: block;
+        position: absolute;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        min-width: 160px;
+    }
+    .dropdown.show  {
+      
+        width: 80%;
+    }
+   .menu-button {
+  display: block;  /* Ensure the button is always displayed */
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;  /* Move the button to the left side */
+
+}
+
+
+    #menu-toggle:checked + .menu-button + nav {
+        display: block;
+        position: absolute;
+        background: #4680A6;
+        top: 80px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul {
+        flex-direction: column;
+    }
+
+    #menu-toggle:checked + .menu-button + nav ul li {
+        margin: 1rem 0;
+    }
+
+
+    .nav-button img {
+        display: block;
+    }
+    
+   
+    
+    .dashboard-column {
+        position: static;
+        width: 100%;
+        margin-top: 70px;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 16px;
+        z-index: 1;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .form-group label {
+        text-align: left;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cancel-button, .save-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .orders-list {
+        font-size: 14px;
+    }
+    .dropdown-content{
+        width: 280px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .custom-header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-image {
+        height: 30px;
+    }
+
+    .dashboard-column {
+        width: 100%;
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #DADADA;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .dropdown-content {
+        display: block;
+        position: absolute;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        min-width: 160px;
+    }
+    .dropdown.show  {
+      
+        width: 80%;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px 10px;
+    }
+
+    .section-title {
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .form-group label {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .form-group input, .form-group select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cancel-button, .save-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .orders-list {
+        font-size: 12px;
+    }
+
+    .orders-list th, .orders-list td {
+        padding: 5px;
+    }
+
+    .footer-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text span {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 481px) {
+    
+    .dropdown-content{
+        width: 280px;
+    }
+    .menu-button{
+       margin-bottom: 50px;
+       margin-top: -50px;
+    }
+    .notification-form{
+        width: 500px;
+    }
+    .view-template-button1
+    {
+        margin-left: 50px;
+    }
+    .view-template-button2
+    {
+        margin-left: 50px;
+    }
+    .verify-button
+{
+    margin-left: -10px;
+}
+.menu-button{
+    margin-bottom: 50px;
+    margin-top: -100px;
+ }
+ .logo{
+     margin-bottom: 50px;
+    margin-top: 10px;
+ }
+}
